@@ -1,0 +1,67 @@
+@use "../../core/styles/variables.scss" as vars;
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.skills-list-category {
+    background-color: vars.$light-body-color;
+    box-shadow: 0.0625rem 0.125rem 0.125rem vars.$light-bg-shadow-color;
+    margin: 0 auto 2.5rem;
+    padding: 1rem;
+    text-align: center;
+    transition: 0.25s ease;
+    width: 80%;
+
+    &:hover {
+        box-shadow: 0.25rem 0.5rem 0.625rem vars.$light-bg-shadow-color;
+        transition: 0.25s ease;
+    }
+}
+
+.skills-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 18rem;
+}
+
+.skills-item {
+    float: left;
+    margin: 1rem 1rem 0;
+    text-align: center;
+}
+
+.skills-img {
+    height: 4.75rem;
+}
+
+@media screen and (min-width: vars.$break-small) {
+    .skills-list {
+        align-items: center;
+        flex-flow: row wrap;
+    }
+
+    .skills-list-category {
+        display: inline-block;
+        flex-grow: 1;
+        margin: 0 1rem 2.5rem;
+        padding: 1rem;
+        text-align: left;
+        width: auto;
+    }
+
+    .skills-items-container {
+        max-width: none;
+    }
+}
+
+@media screen and (min-width: vars.$break-large) {
+    .skills-list-category {
+        display: inline-block;
+        margin: 0 1rem 3.125rem;
+        padding: 1rem;
+    }
+}

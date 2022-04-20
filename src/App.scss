@@ -1,0 +1,233 @@
+@use "./core/styles/variables" as vars;
+
+//==============================
+// NORMALIZE CSS
+//==============================/
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+img,
+ul,
+li,
+footer,
+header,
+nav,
+section {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    font-family: sans-mono;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+
+//==============================
+// GLOBAL STYLES
+//==============================/
+
+body {
+    background-color: vars.$dark-background-color;
+    margin: 0;
+}
+
+// Sets page content width
+section * {
+    margin: 0 auto;
+    max-width: vars.$content-max-width;
+}
+
+// ACCESSABILITY
+
+\:focus {
+    outline-color: vars.$hover-nav-color;
+    outline-width: 0.1875rem;
+}
+
+// TEXT
+
+h1 {
+    color: vars.$accent-color;
+    font-family: vars.$mono-font-stack;
+    font-size: 7vw;
+    font-weight: 100;
+    margin: -0.375rem 0 0.125rem;
+}
+
+h2 {
+    color: vars.$light-text-color;
+    font-family: vars.$mono-font-stack;
+    font-size: 3.2vw;
+    font-weight: 100;
+}
+
+h3 {
+    font-family: vars.$serif-font-stack;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+h4 {
+    font-family: vars.$serif-font-stack;
+    font-size: 1.5rem;
+    padding-bottom: 0.125rem;
+}
+
+p {
+    color: vars.$main-text-color;
+    font-family: vars.$mono-font-stack;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+a {
+    background-color: transparent;
+    color: inherit;
+
+    &:hover {
+        text-decoration: underline vars.$accent-color;
+    }
+}
+
+ul {
+    color: vars.$dark-text-color;
+    font-family: vars.$serif-font-stack;
+    list-style: none;
+}
+
+//==============================
+// PAGES
+//==============================/
+
+section {
+    padding: 4rem 1rem;
+}
+
+.dark-page {
+    background-color: vars.$dark-background-color;
+
+    h3 {
+        color: vars.$light-text-color;
+    }
+
+    h4 {
+        border-bottom: 0.0625rem solid vars.$light-text-color;
+        padding: 0.625rem;
+    }
+
+    p {
+        color: vars.$main-text-color;
+        padding: 0.625rem;
+    }
+}
+
+.light-page {
+    background-color: vars.$light-body-color;
+
+    h3,
+    p {
+        color: vars.$dark-text-color;
+    }
+
+    h4 {
+        border-bottom: 0.0625rem solid vars.$dark-text-color;
+    }
+}
+
+.light2-page {
+    background-color: vars.$light2-body-color;
+    padding-bottom: 6.875rem;
+
+    h3,
+    h4,
+    p {
+        color: vars.$dark-text-color;
+    }
+
+    h4 {
+        border-bottom: 0.0625rem solid vars.$dark-text-color;
+    }
+}
+
+#github-img {
+    filter: invert(100%);
+}
+
+//=============================================================================/
+// Screens with higher resolution than 34rem/544px
+//=============================================================================/
+
+@media screen and (min-width: vars.$break-small) {
+    h1 {
+        font-size: 2.375rem;
+        margin-top: -0.375rem;
+    }
+
+    h2 {
+        font-size: 1.08rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 6.5rem 1.625rem;
+    }
+}
+
+//=============================================================================/
+// Screens with higher resolution than 43.75rem/700px
+//=============================================================================/
+
+@media screen and (min-width: vars.$break-large) {
+    h1 {
+        font-size: 2.625rem;
+        margin-top: -0.25rem;
+    }
+
+    h2 {
+        font-size: 1.1875rem;
+    }
+
+    section {
+        padding: 6.5rem 4.6875rem;
+    }
+}

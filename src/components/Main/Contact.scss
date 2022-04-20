@@ -1,0 +1,21 @@
+@use "../../core/styles/variables.scss" as vars;
+
+#contact-info {
+    margin: 2rem auto 0;
+    overflow: auto;
+    width: 12rem;
+}
+
+#contact-info-icons,
+#contact-info-text {
+    float: left;
+    padding: 0 0.25rem;
+}
+
+#contact-info-icons {
+    text-align: center;
+}
+
+.contact-text {
+    color: vars.$accent-color;
+}

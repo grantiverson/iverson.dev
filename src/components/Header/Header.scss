@@ -1,0 +1,87 @@
+@use "../../core/styles/variables" as vars;
+
+header {
+    position: relative;
+}
+
+#nav-button {
+    margin: 0.25rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+nav {
+    display: none;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+
+    ul {
+        list-style-type: none;
+        margin-left: 0;
+        padding: 1.25rem;
+
+        li {
+            padding: 0.5rem 0.5rem 0;
+
+            a {
+                color: vars.$link-text-color;
+                display: block;
+
+                &:hover {
+                    border-bottom: 0.1875rem solid vars.$hover-nav-color;
+                    margin-bottom: -0.1875rem;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: vars.$break-small) {
+    //==============================
+    // NAVIGATION
+    //==============================/
+
+    #nav-button,
+    #mini-nav {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        float: right;
+        font-size: 1.25rem;
+        padding: 0;
+        width: 29.375rem;
+        z-index: 1;
+
+        ul {
+            li {
+                display: inline-block;
+                margin-right: -0.25rem;
+                padding: 0;
+                text-align: center;
+                width: 25%;
+
+                a {
+                    padding: 0.5rem 0.25rem 0.25rem;
+                    transition: 0.25s ease;
+
+                    &:hover {
+                        transition: 0.25s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//======== End of @media screen and (min-width: vars.$break-small) ========/
+
+@media screen and (min-width: vars.$content-max-width) {
+    #main-nav {
+        float: left;
+        margin-left: 59.5%;
+    }
+}

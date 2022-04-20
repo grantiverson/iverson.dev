@@ -1,0 +1,72 @@
+@use "../../core/styles/variables.scss" as vars;
+
+#introduction {
+    height: 100vh;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+#introduction-content {
+    display: inline-block;
+    margin-top: 40vh;
+}
+
+#introduction-text {
+    display: inline-block;
+    text-align: left;
+}
+
+#title {
+    margin-left: 4.5vw;
+}
+
+#logo {
+    float: left;
+    margin: 0 0.5rem 0 0;
+    width: 18vw;
+}
+
+#teaser {
+    margin-top: 10vh;
+}
+
+#arrow {
+    width: 2rem;
+}
+
+.css-value-text-span {
+    color: vars.$css-text-color;
+}
+
+.light-text-span {
+    color: vars.$light-text-color;
+}
+
+@media screen and (min-width: vars.$break-small) {
+    #title {
+        margin-left: 1.5rem;
+    }
+
+    #introduction-content {
+        margin-top: calc(40vh - 4.6875rem);
+    }
+
+    #logo {
+        width: 6.25rem;
+    }
+}
+
+@media screen and (min-width: vars.$break-large) {
+    #title {
+        margin-left: 1.75rem;
+    }
+
+    #introduction {
+        width: 35.625rem;
+    }
+
+    #logo {
+        width: 7.5rem;
+    }
+}
