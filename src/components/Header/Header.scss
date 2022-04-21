@@ -1,78 +1,66 @@
 @use "../../core/styles/variables" as vars;
 
-header {
-    position: relative;
-}
+.header {
+    &__button {
+        margin: 0.25rem;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        height: 3rem;
+        width: 3rem;
+        font-size: 1.875rem;
+        color: vars.$link-text-color;
+    }
 
-#nav-button {
-    margin: 0.25rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
+    &__nav {
+        position: absolute;
+        font-size: 1.5rem;
+        margin-top: -200px;
+        transition: margin-top 500ms ease-in-out;
+    }
 
-nav {
-    display: none;
-    font-size: 1.5rem;
-    padding-bottom: 0.5rem;
-
-    ul {
-        list-style-type: none;
-        margin-left: 0;
+    &__links {
         padding: 1.25rem;
+    }
 
-        li {
-            padding: 0.5rem 0.5rem 0;
+    &__link {
+        padding: 0.5rem 0.5rem 0;
+        color: vars.$link-text-color;
+    }
 
-            a {
-                color: vars.$link-text-color;
-                display: block;
-
-                &:hover {
-                    border-bottom: 0.1875rem solid vars.$hover-nav-color;
-                    margin-bottom: -0.1875rem;
-                    text-decoration: none;
-                }
-            }
-        }
+    a:hover {
+        border-bottom: 0.1875rem solid vars.$hover-nav-color;
+        margin-bottom: -0.1875rem;
+        text-decoration: none;
     }
 }
 
 @media screen and (min-width: vars.$break-small) {
-    //==============================
-    // NAVIGATION
-    //==============================/
+    .header {
+        &__button {
+            display: none;
+        }
 
-    #nav-button,
-    #mini-nav {
-        display: none;
-    }
+        &__nav {
+            right: 0;
+            font-size: 1.25rem;
+            margin-top: 0;
+            width: 29.375rem;
+        }
 
-    nav {
-        display: block;
-        float: right;
-        font-size: 1.25rem;
-        padding: 0;
-        width: 29.375rem;
-        z-index: 1;
+        &__links {
+            display: flex;
+        }
 
-        ul {
-            li {
-                display: inline-block;
-                margin-right: -0.25rem;
-                padding: 0;
-                text-align: center;
-                width: 25%;
+        &__link {
+            text-align: center;
+            width: 25%;
+        }
 
-                a {
-                    padding: 0.5rem 0.25rem 0.25rem;
-                    transition: 0.25s ease;
-
-                    &:hover {
-                        transition: 0.25s ease;
-                    }
-                }
-            }
+        a {
+            display: block;
         }
     }
 }
@@ -80,8 +68,8 @@ nav {
 //======== End of @media screen and (min-width: vars.$break-small) ========/
 
 @media screen and (min-width: vars.$content-max-width) {
-    #main-nav {
-        float: left;
+    .header__nav {
+        right: auto;
         margin-left: 59.5%;
     }
 }

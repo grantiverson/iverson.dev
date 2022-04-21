@@ -1,66 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
-import NavButton from "../../images/navButton.png";
+import { Bars } from "../icons/solid";
 
 import "./Header.scss";
 
-const Header = () => (
-    <header>
-        <img
-            alt="Navigation Button"
-            height="48"
-            id="nav-button"
-            src={NavButton}
-        />
-        <nav id="main-nav">
-            <ul>
-                <li>
-                    <a href="#about" id="about-main-nav">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="#projects" id="projects-main-nav">
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a href="#skills" id="about-main-nav">
-                        Skills
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact" id="contact-main-nav">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <nav id="mini-nav">
-            <ul>
-                <li>
-                    <a href="#about" id="about-mini-nav">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="#projects" id="projects-mini-nav">
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a href="#skills" id="about-mini-nav">
-                        Skills
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact" id="contact-mini-nav">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-);
+const Header = () => {
+    const [showNav, setShowNav] = useState(false);
+    const links = ["About", "Projects", "Skills", "Contact"];
+
+    return (
+        <header className="header">
+            <span
+                className="header__button"
+                onClick={() => setShowNav(!showNav)}
+            >
+                <Bars />
+            </span>
+            <nav
+                className="header__nav"
+                style={showNav ? { marginTop: 0 } : null}
+            >
+                <ul className="header__links">
+                    {links.map((link) => {
+                        const _link = link.toLowerCase();
+
+                        return (
+                            <li className="header__link">
+                                <a href={`#${_link}`} id={`${_link}-main-nav`}>
+                                    {link}
+                                </a>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </nav>
+        </header>
+    );
+};
 
 export default Header;
