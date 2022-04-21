@@ -10,6 +10,7 @@ import HTML5 from "../../images/skills-html5.png";
 import JavaScript from "../../images/skills-javascript.png";
 import Math from "../../images/skills-math.png";
 import _React from "../../images/skills-react.png";
+import { GitHub } from "../icons/brands";
 
 import "./Projects.scss";
 
@@ -87,7 +88,7 @@ const Projects = () => (
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <i className="fab fa-github fa-2x"></i>
+                    <GitHub />
                 </a>
             </div>
             */}
@@ -141,7 +142,7 @@ const Projects = () => (
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <i className="fab fa-github fa-2x"></i>
+                    <GitHub />
                 </a>
             </div>
 
@@ -179,7 +180,7 @@ const Projects = () => (
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <i className="fab fa-github fa-2x"></i>
+                    <GitHub />
                 </a>
             </div>
 
@@ -229,7 +230,7 @@ const Projects = () => (
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <i className="fab fa-github fa-2x"></i>
+                    <GitHub />
                 </a>
             </div>
 
@@ -273,7 +274,7 @@ const Projects = () => (
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <i className="fab fa-github fa-2x"></i>
+                    <GitHub />
                 </a>
             </div>
 
@@ -318,7 +319,7 @@ const Projects = () => (
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <i className="fab fa-github fa-2x"></i>
+                    <GitHub />
                 </a>
             </div>
         </div>

@@ -1,5 +1,9 @@
 import React from "react";
 
+import { GitHub, LinkedIn } from "../icons/brands";
+import { Envelope, File } from "../icons/regular";
+import { Phone } from "../icons/solid";
+
 import "./Contact.scss";
 
 const Contact = () => (
@@ -12,19 +16,19 @@ const Contact = () => (
         <div id="contact-info" className="fade-item">
             <div id="contact-info-icons">
                 <p>
-                    <i className="far fa-envelope"></i>
+                    <Envelope />
                 </p>
                 <p>
-                    <i className="fas fa-phone"></i>
+                    <Phone />
                 </p>
                 <p>
-                    <i className="fab fa-linkedin"></i>
+                    <LinkedIn />
                 </p>
                 <p>
-                    <i className="fab fa-github"></i>
+                    <GitHub />
                 </p>
                 <p>
-                    <i className="far fa-file-alt"></i>
+                    <File />
                 </p>
             </div>
             <div id="contact-info-text">
