@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Bars } from "../icons/solid";
+import { HeaderLink } from ".";
 
 import "./Header.scss";
 
@@ -16,22 +17,15 @@ const Header = () => {
             >
                 <Bars />
             </span>
+
             <nav
                 className="header__nav"
                 style={showNav ? { marginTop: 0 } : null}
             >
                 <ul className="header__links">
-                    {links.map((link) => {
-                        const _link = link.toLowerCase();
-
-                        return (
-                            <li className="header__link">
-                                <a href={`#${_link}`} id={`${_link}-main-nav`}>
-                                    {link}
-                                </a>
-                            </li>
-                        );
-                    })}
+                    {links.map((link, i) => (
+                        <HeaderLink {...{ link }} key={i} />
+                    ))}
                 </ul>
             </nav>
         </header>
