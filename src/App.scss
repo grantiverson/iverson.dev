@@ -62,12 +62,6 @@ body {
     margin: 0;
 }
 
-// Sets page content width
-section * {
-    margin: 0 auto;
-    max-width: vars.$content-max-width;
-}
-
 // ACCESSABILITY
 
 \:focus {
