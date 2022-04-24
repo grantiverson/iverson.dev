@@ -100,7 +100,6 @@ h4 {
 }
 
 p {
-    color: vars.$main-text-color;
     font-family: vars.$mono-font-stack;
     font-size: 1rem;
     margin-bottom: 0.25rem;
@@ -149,11 +148,7 @@ section {
 
 .light-page {
     background-color: vars.$light-body-color;
-
-    h3,
-    p {
-        color: vars.$dark-text-color;
-    }
+    color: vars.$dark-text-color;
 
     h4 {
         border-bottom: 0.0625rem solid vars.$dark-text-color;
