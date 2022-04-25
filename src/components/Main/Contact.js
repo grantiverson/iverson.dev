@@ -53,9 +53,10 @@ const Contact = () => (
                     <p>GitHub</p>
                 </a>
                 <a
-                    href="https://iverson.io/!Grant_Iverson-resume.pdf"
+                    href="https://drive.google.com/file/d/10rkFYTW0kT7WOM54zWzGYimWr-g2T3Ak/view?usp=sharing"
                     target="_blank"
                     rel="noreferrer"
+                    download
                 >
                     <p>Resume</p>
                 </a>
