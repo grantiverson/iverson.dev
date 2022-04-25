@@ -22,17 +22,6 @@ export default App;
 
 // $(document).ready(function() {
 
-//     /* Animation slides page to clicked link */
-//     $('a[href^="#"]').on('click', function(event) {
-//         var target = $(this.getAttribute('href'));
-//         if( target.length ) {
-//             event.preventDefault();
-//             $('html, body').stop().animate({
-//                 scrollTop: target.offset().top
-//             }, 500);
-//         }
-//     });
-
 //     // Decides what to do when clicking on a link
 //     $('#projects-selector a').click(function() {
 //         var clickedSelector = '#' + $(this).attr('id');                       // Stores # + id of clicked link in clickedSelector

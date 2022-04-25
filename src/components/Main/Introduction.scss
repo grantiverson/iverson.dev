@@ -1,72 +1,74 @@
 @use "../../core/styles/variables.scss" as vars;
 
-#introduction {
+.introduction {
     height: 100vh;
     margin: auto;
     padding: 0;
     text-align: center;
-}
 
-#introduction-content {
-    display: inline-block;
-    margin-top: 40vh;
-}
+    &__content {
+        display: inline-block;
+        margin-top: 40vh;
+    }
 
-#introduction-text {
-    display: inline-block;
-    text-align: left;
-}
+    &__logo {
+        float: left;
+        margin: 0 0.5rem 0 0;
+        width: 18vw;
+    }
 
-#title {
-    margin-left: 4.5vw;
-}
+    &__text {
+        display: inline-block;
+        text-align: left;
+    }
 
-#logo {
-    float: left;
-    margin: 0 0.5rem 0 0;
-    width: 18vw;
-}
+    &__color-white {
+        color: vars.$light-text-color;
+    }
 
-#teaser {
-    margin-top: 10vh;
-}
+    &__title {
+        margin-left: 4.5vw;
+    }
 
-#arrow {
-    width: 2rem;
-}
+    &__color-green {
+        color: vars.$css-text-color;
+    }
 
-.css-value-text-span {
-    color: vars.$css-text-color;
-}
+    &__teaser {
+        margin-top: 10vh;
+    }
 
-.light-text-span {
-    color: vars.$light-text-color;
+    &__arrow {
+        width: 2rem;
+    }
 }
 
 @media screen and (min-width: vars.$break-small) {
-    #title {
-        margin-left: 1.5rem;
-    }
+    .introduction {
+        &__title {
+            margin-left: 1.5rem;
+        }
 
-    #introduction-content {
-        margin-top: calc(40vh - 4.6875rem);
-    }
+        &__content {
+            margin-top: calc(40vh - 4.6875rem);
+        }
 
-    #logo {
-        width: 6.25rem;
+        &__logo {
+            width: 6.25rem;
+        }
     }
 }
 
 @media screen and (min-width: vars.$break-large) {
-    #title {
-        margin-left: 1.75rem;
-    }
-
-    #introduction {
+    .introduction {
         width: 35.625rem;
-    }
 
-    #logo {
-        width: 7.5rem;
+        &__title {
+            margin-left: 1.75rem;
+        }
+
+        &__logo {
+            width: 7.5rem;
+        }
     }
 }
