@@ -12,8 +12,8 @@ const About = () => (
                 math for eight years I became frustrated with the education
                 system and decided to switch careers. Now I am applying my{" "}
                 <span className="dark-text-span">expert problem solving</span>{" "}
-                and <span className="dark-text-span">communication</span>
-                skills to web development.
+                and <span className="dark-text-span">communication</span> skills
+                to web development.
             </p>
             <p className="indent fade-item">
                 While completing a{" "}
