@@ -54,7 +54,7 @@ const Project = ({
             <a href={url} target="_blank" rel="noreferrer">
                 <img className="project__screen-shot" src={ss} alt={title} />
                 <div className="project__overlay">
-                    <h4 className="project__title">{title}</h4>
+                    <span className="project__title">{title}</span>
                     <p>{description}</p>
                 </div>
                 <div className="project__technologies">
