@@ -1,7 +1,7 @@
 import React from "react";
 
-import Arrow from "../../images/arrow.png";
-import Logo from "../../images/logo.png";
+import Arrow from "../../../images/arrow.png";
+import Logo from "../../../images/logo.png";
 
 import "./Introduction.scss";
 

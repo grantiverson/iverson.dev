@@ -1,16 +1,19 @@
 import React from "react";
 
-import ArcadeGame from "../../images/projects-arcade-game.jpg";
-import Concentration from "../../images/projects-concentration.jpg";
-import Sierpinski from "../../images/projects-sierpinski.jpg";
-import SolarSystem from "../../images/projects-solar-system.jpg";
-import VeggieFinder from "../../images/projects-veggie-finder.jpg";
-import CSS3 from "../../images/skills-css3.png";
-import HTML5 from "../../images/skills-html5.png";
-import JavaScript from "../../images/skills-javascript.png";
-import Math from "../../images/skills-math.png";
-import _React from "../../images/skills-react.png";
-import { GitHub } from "../icons/brands";
+// technology icons
+import CSS3 from "../../../images/skills-css3.png";
+import HTML5 from "../../../images/skills-html5.png";
+import JavaScript from "../../../images/skills-javascript.png";
+import Math from "../../../images/skills-math.png";
+import _React from "../../../images/skills-react.png";
+import { GitHub } from "../../common/FontAwesome/brands";
+
+// project screenshots
+import ArcadeGame from "../../../images/projects-arcade-game.jpg";
+import Concentration from "../../../images/projects-concentration.jpg";
+import Sierpinski from "../../../images/projects-sierpinski.jpg";
+import SolarSystem from "../../../images/projects-solar-system.jpg";
+import VeggieFinder from "../../../images/projects-veggie-finder.jpg";
 
 import "./Projects.scss";
 
@@ -47,8 +50,7 @@ const Projects = () => (
         </div>
 
         <div id="projects-container">
-            {/*
-            <div className="projects-item fade-item all-projects html-css-projects javascript-projects react-projects">
+            {/* <div className="projects-item fade-item all-projects html-css-projects javascript-projects react-projects">
                 <a href="#" target="_blank" rel="noreferrer">
                     <img className="projects-img" src="#" alt="Mastermind" />
                     <div className="projects-item-details">
@@ -90,8 +92,7 @@ const Projects = () => (
                 >
                     <GitHub />
                 </a>
-            </div>
-            */}
+            </div> */}
 
             <div className="projects-item fade-item all-projects html-css-projects javascript-projects react-projects">
                 <a

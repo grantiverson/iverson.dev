@@ -1,19 +1,19 @@
 import React from "react";
 
-import CSS3 from "../../images/skills-css3.png";
-import ESLint from "../../images/skills-eslint.png";
-import GitHub from "../../images/skills-github.png";
-import Gulp from "../../images/skills-gulp.png";
-import HTML5 from "../../images/skills-html5.png";
-import JavaScript from "../../images/skills-javascript.png";
-import jQuery from "../../images/skills-jquery.png";
-import Math from "../../images/skills-math.png";
-import NPM from "../../images/skills-npm.png";
-import Photoshop from "../../images/skills-photoshop.png";
-import ReactRouter from "../../images/skills-react-router.png";
-import _React from "../../images/skills-react.png";
-import Sass from "../../images/skills-sass.png";
-import Spanish from "../../images/skills-spanish.png";
+import CSS3 from "../../../images/skills-css3.png";
+import ESLint from "../../../images/skills-eslint.png";
+import GitHub from "../../../images/skills-github.png";
+import Gulp from "../../../images/skills-gulp.png";
+import HTML5 from "../../../images/skills-html5.png";
+import JavaScript from "../../../images/skills-javascript.png";
+import jQuery from "../../../images/skills-jquery.png";
+import Math from "../../../images/skills-math.png";
+import NPM from "../../../images/skills-npm.png";
+import Photoshop from "../../../images/skills-photoshop.png";
+import _React from "../../../images/skills-react.png";
+import ReactRouter from "../../../images/skills-react-router.png";
+import Sass from "../../../images/skills-sass.png";
+import Spanish from "../../../images/skills-spanish.png";
 
 import "./Skills.scss";
 

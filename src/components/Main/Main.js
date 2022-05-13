@@ -1,6 +1,10 @@
 import React from "react";
 
-import { About, Contact, Introduction, Projects, Skills } from ".";
+import About from "./About";
+import Contact from "./Contact";
+import Introduction from "./Introduction";
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 const Main = () => (
     <main id="main">

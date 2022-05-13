@@ -1,8 +1,8 @@
 import React from "react";
 
-import { GitHub, LinkedIn } from "../icons/brands";
-import { Envelope, File } from "../icons/regular";
-import { Phone } from "../icons/solid";
+import { GitHub, LinkedIn } from "../../common/FontAwesome/brands";
+import { Envelope, File } from "../../common/FontAwesome/regular";
+import { Phone } from "../../common/FontAwesome/solid";
 
 import "./Contact.scss";
 
