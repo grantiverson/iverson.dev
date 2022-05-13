@@ -1,0 +1,36 @@
+@use "../../../core/styles/variables" as vars;
+
+.nav-links {
+    font-size: 1.5rem;
+
+    &__link {
+        padding: 0.5rem 0.5rem 0;
+        color: vars.$link-text-color;
+        cursor: pointer;
+    }
+
+    &__link-text:hover {
+        border-bottom: 0.1875rem solid vars.$hover-nav-color;
+        margin-bottom: -0.1875rem;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: vars.$break-small) {
+    .nav-links {
+        font-size: 1.25rem;
+
+        &__links {
+            display: flex;
+        }
+
+        &__link {
+            text-align: center;
+            flex: 1 1 0;
+        }
+
+        &__link-text {
+            display: block;
+        }
+    }
+}

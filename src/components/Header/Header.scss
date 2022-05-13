@@ -14,26 +14,14 @@
         color: vars.$link-text-color;
     }
 
-    &__nav {
+    .nav-links {
         position: absolute;
-        font-size: 1.5rem;
         margin-top: -200px;
         transition: margin-top 500ms ease-in-out;
-    }
 
-    &__links {
-        padding: 1.25rem;
-    }
-
-    &__link {
-        padding: 0.5rem 0.5rem 0;
-        color: vars.$link-text-color;
-    }
-
-    &__link-text:hover {
-        border-bottom: 0.1875rem solid vars.$hover-nav-color;
-        margin-bottom: -0.1875rem;
-        text-decoration: none;
+        &__links {
+            padding: 1.25rem;
+        }
     }
 }
 
@@ -43,24 +31,10 @@
             display: none;
         }
 
-        &__nav {
+        .nav-links {
             right: 0;
-            font-size: 1.25rem;
             margin-top: 0;
             width: 29.375rem;
-        }
-
-        &__links {
-            display: flex;
-        }
-
-        &__link {
-            text-align: center;
-            width: 25%;
-        }
-
-        &__link-text {
-            display: block;
         }
     }
 }
@@ -68,7 +42,7 @@
 //======== End of @media screen and (min-width: vars.$break-small) ========/
 
 @media screen and (min-width: vars.$content-max-width) {
-    .header__nav {
+    .header .nav-links {
         right: auto;
         margin-left: 59.5%;
     }
