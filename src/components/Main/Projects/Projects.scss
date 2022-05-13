@@ -108,11 +108,13 @@
     filter: drop-shadow(0.125rem 0.125rem 0.25rem vars.$dark-bg-shadow-color);
     left: 0.5rem;
     position: absolute;
+    font-size: 1.875rem;
+    line-height: 1.875rem;
 }
 
 @media screen and (min-width: vars.$break-small) {
     #projects-selector {
-        width: 30rem;
+        width: 32rem;
 
         ul {
             li {

@@ -5,11 +5,11 @@ import { NavLink } from ".";
 
 import "./NavLinks.scss";
 
-const NavLinks = ({ links, style }) => (
+const NavLinks = ({ links, style, ...rest }) => (
     <nav className="nav-links" {...{ style }}>
         <ul className="nav-links__links">
             {links.map((link, i) => (
-                <NavLink {...link} key={i} />
+                <NavLink {...rest} {...link} key={i} />
             ))}
         </ul>
     </nav>

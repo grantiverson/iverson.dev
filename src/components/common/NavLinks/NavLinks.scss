@@ -9,10 +9,16 @@
         cursor: pointer;
     }
 
-    &__link-text:hover {
-        border-bottom: 0.1875rem solid vars.$hover-nav-color;
-        margin-bottom: -0.1875rem;
-        text-decoration: none;
+    &__link-text {
+        &:hover {
+            border-bottom: 0.1875rem solid vars.$hover-nav-color;
+            margin-bottom: -0.1875rem;
+        }
+
+        &--active {
+            border-bottom: 0.1875rem solid vars.$light-text-color;
+            margin-bottom: -0.1875rem;
+        }
     }
 }
 
