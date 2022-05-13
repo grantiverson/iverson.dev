@@ -5,7 +5,9 @@ import constants from "../../../core/constants";
 import Images from "../../../images";
 import { GitHub } from "../../common/FontAwesome/brands";
 
-const Projects = ({
+import "./Project.scss";
+
+const Project = ({
     description,
     repositoryUrl,
     ss,
@@ -17,7 +19,7 @@ const Projects = ({
 
     const ProjectImage = ({ alt, src }) => (
         <img
-            className="projects-skills-img"
+            className="project__technology"
             {...{ src }}
             alt={ProjectTypes[alt]}
         />
@@ -48,14 +50,14 @@ const Projects = ({
     };
 
     return (
-        <div className="projects-item fade-item all-projects html-css-projects javascript-projects react-projects">
+        <div className="project fade-item">
             <a href={url} target="_blank" rel="noreferrer">
-                <img className="projects-img" src={ss} alt={title} />
-                <div className="projects-item-details">
-                    <h4 className="projects-item-title">{title}</h4>
+                <img className="project__screen-shot" src={ss} alt={title} />
+                <div className="project__overlay">
+                    <h4 className="project__title">{title}</h4>
                     <p>{description}</p>
                 </div>
-                <div className="projects-skills-img-container">
+                <div className="project__technologies">
                     {technologies.map((technology) => (
                         <React.Fragment key={technology}>
                             {images[technology]}
@@ -64,7 +66,7 @@ const Projects = ({
                 </div>
             </a>
             <a
-                className="projects-skills-github"
+                className="project__github"
                 href={repositoryUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -75,4 +77,4 @@ const Projects = ({
     );
 };
 
-export default Projects;
+export default Project;

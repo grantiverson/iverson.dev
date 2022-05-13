@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import constants from "../../../core/constants";
 
-import { Project, ProjectLinks, ProjectsList } from ".";
+import { ProjectLinks, ProjectsList } from ".";
 
 import "./Projects.scss";
 
@@ -11,7 +11,7 @@ const Projects = () => {
     const [showProjects, setShowProjects] = useState(ProjectTypes.ALL);
 
     return (
-        <section id="projects" className="dark-page">
+        <section className="projects dark-page">
             <h3 className="fade-item">Projects</h3>
 
             <ProjectLinks {...{ showProjects, setShowProjects }} />

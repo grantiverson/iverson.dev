@@ -65,7 +65,7 @@ const Projects = ({ showProjects }) => {
     ];
 
     return (
-        <div id="projects-container">
+        <div className="projects__list">
             {projects
                 .filter(
                     (project) =>

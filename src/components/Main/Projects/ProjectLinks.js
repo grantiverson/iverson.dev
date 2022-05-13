@@ -20,7 +20,7 @@ const ProjectLinks = ({ showProjects, setShowProjects }) => {
     ];
 
     return (
-        <div id="projects-selector" className="fade-item">
+        <div className="fade-item">
             <NavLinks active={ProjectTypes[showProjects]} {...{ links }} />
         </div>
     );
