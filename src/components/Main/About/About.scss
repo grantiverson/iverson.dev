@@ -1,12 +1,12 @@
 @use "../../../core/styles/variables.scss" as vars;
 
-#about-txt {
-    overflow: hidden;
-    text-align: justify;
-    text-justify: inter-word;
+.about {
+    &__content {
+        text-align: justify;
 
-    p {
-        color: vars.$main-text-color;
+        p {
+            color: vars.$main-text-color;
+        }
     }
 }
 

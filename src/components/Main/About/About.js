@@ -3,9 +3,9 @@ import React from "react";
 import "./About.scss";
 
 const About = () => (
-    <section id="about" className="light-page">
+    <section className="about light-page">
         <h3 className="fade-item">About</h3>
-        <div id="about-txt">
+        <div className="about__content">
             <p className="indent fade-item">
                 I am an <span className="dark-text-span">avid learner</span>{" "}
                 with a mission to use my skills to uplift others. After teaching
