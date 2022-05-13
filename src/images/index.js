@@ -1,0 +1,27 @@
+const Images = {
+    arcadeGame: require("./projects-arcade-game.jpg"),
+    arrow: require("./arrow.png"),
+    concentration: require("./projects-concentration.jpg"),
+    css: require("./skills-css3.png"),
+    eslint: require("./skills-eslint.png"),
+    github: require("./skills-github.png"),
+    gulp: require("./skills-gulp.png"),
+    html: require("./skills-html5.png"),
+    index: require("./index.js"),
+    jQuery: require("./skills-jquery.png"),
+    javascript: require("./skills-javascript.png"),
+    logo: require("./logo.png"),
+    math: require("./skills-math.png"),
+    npm: require("./skills-npm.png"),
+    photoshop: require("./skills-photoshop.png"),
+    preview: require("./preview.png"),
+    react: require("./skills-react.png"),
+    reactRouter: require("./skills-react-router.png"),
+    sass: require("./skills-sass.png"),
+    sierpinski: require("./projects-sierpinski.jpg"),
+    solarSystem: require("./projects-solar-system.jpg"),
+    spanish: require("./skills-spanish.png"),
+    veggieFinder: require("./projects-veggie-finder.jpg"),
+};
+
+export default Images;
