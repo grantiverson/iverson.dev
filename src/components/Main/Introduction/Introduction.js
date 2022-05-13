@@ -7,7 +7,7 @@ import "./Introduction.scss";
 
 const Introduction = () => {
     const onClick = () =>
-        document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
+        document.querySelector(".about").scrollIntoView({ behavior: "smooth" });
 
     return (
         <section className="introduction dark-page">

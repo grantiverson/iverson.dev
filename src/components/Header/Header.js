@@ -8,7 +8,7 @@ import "./Header.scss";
 const Header = () => {
     const [showNav, setShowNav] = useState(false);
     const handleClick = (text) =>
-        document.querySelector(`#${text}`).scrollIntoView({
+        document.querySelector(`.${text}`).scrollIntoView({
             behavior: "smooth",
         });
     const links = [
