@@ -3,7 +3,6 @@
 .project {
     $block: &;
     background-color: vars.$dark-background-color;
-    margin: 0.375rem 0;
     overflow: hidden;
     position: relative;
 
@@ -76,8 +75,6 @@
 
 @media screen and (min-width: vars.$break-small) {
     .project {
-        margin: 0.5rem;
-
         &__screen-shot {
             max-width: 20rem;
         }

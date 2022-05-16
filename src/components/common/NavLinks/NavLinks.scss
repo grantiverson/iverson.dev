@@ -11,7 +11,7 @@
 
     &__link-text {
         &:hover {
-            border-bottom: 0.1875rem solid vars.$hover-nav-color;
+            border-bottom: 0.1875rem solid vars.$accent-color;
             margin-bottom: -0.1875rem;
         }
 
