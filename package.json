@@ -23,6 +23,7 @@
         "build": "react-scripts build",
         "deploy": "react-scripts build && firebase deploy --only hosting",
         "eject": "react-scripts eject",
+        "format": "prettier --check .",
         "start": "react-scripts start",
         "test": "react-scripts test"
     },
