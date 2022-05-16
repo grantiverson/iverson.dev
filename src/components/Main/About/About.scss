@@ -2,6 +2,8 @@
 
 .about {
     &__content {
+        max-width: vars.$break-large;
+        margin: 0 auto;
         text-align: justify;
 
         p {

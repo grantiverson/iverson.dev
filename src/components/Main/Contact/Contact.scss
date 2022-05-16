@@ -1,6 +1,11 @@
 @use "../../../core/styles/variables.scss" as vars;
 
 .contact {
+    &__content {
+        max-width: vars.$break-large;
+        margin: 0 auto 0.5rem;
+    }
+
     &__links {
         display: flex;
         justify-content: center;

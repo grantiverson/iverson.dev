@@ -1,6 +1,8 @@
 @use "../../../core/styles/variables.scss" as vars;
 
 .skills-list {
+    max-width: 62rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
