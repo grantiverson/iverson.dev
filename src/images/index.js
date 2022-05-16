@@ -14,7 +14,6 @@ const Images = {
     math: require("./skills-math.png"),
     npm: require("./skills-npm.png"),
     photoshop: require("./skills-photoshop.png"),
-    preview: require("./preview.png"),
     react: require("./skills-react.png"),
     reactRouter: require("./skills-react-router.png"),
     sass: require("./skills-sass.png"),
