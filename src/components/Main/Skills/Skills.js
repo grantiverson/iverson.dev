@@ -30,59 +30,63 @@ const Skills = () => (
     - jQuery/Twig/Sass/Gulp and React/Redux/Sass/webpack
     */
 
-    <section id="skills" className="light2-page">
+    <section className="skills light2-page">
         <h3 className="fade-item">Skills</h3>
-        <div className="skills-list">
-            <div className="skills-list-category fade-item">
-                <h4>Markup</h4>
-                <div className="skills-items-container">
-                    <div className="skills-item">
-                        <img className="skills-img" src={HTML5} alt="HTML5" />
+        <div className="skills__list">
+            <div className="skills__category fade-item">
+                <h4 className="skills__category-title">Markup</h4>
+                <div className="skills__items-container">
+                    <div className="skills__item">
+                        <img className="skills__img" src={HTML5} alt="HTML5" />
                         <p>HTML5</p>
                     </div>
-                    <div className="skills-item">
-                        <img className="skills-img" src={_React} alt="JSX" />
+                    <div className="skills__item">
+                        <img className="skills__img" src={_React} alt="JSX" />
                         <p>JSX</p>
                     </div>
                 </div>
             </div>
 
-            <div className="skills-list-category fade-item">
-                <h4>CSS</h4>
-                <div className="skills-items-container">
-                    <div className="skills-item">
-                        <img className="skills-img" src={CSS3} alt="CSS3" />
+            <div className="skills__category fade-item">
+                <h4 className="skills__category-title">CSS</h4>
+                <div className="skills__items-container">
+                    <div className="skills__item">
+                        <img className="skills__img" src={CSS3} alt="CSS3" />
                         <p>CSS3</p>
                     </div>
-                    <div className="skills-item">
-                        <img className="skills-img" src={Sass} alt="Sass" />
+                    <div className="skills__item">
+                        <img className="skills__img" src={Sass} alt="Sass" />
                         <p>Sass</p>
                     </div>
                 </div>
             </div>
 
-            <div className="skills-list-category fade-item">
-                <h4>JavaScript</h4>
-                <div className="skills-items-container">
-                    <div className="skills-item">
+            <div className="skills__category fade-item">
+                <h4 className="skills__category-title">JavaScript</h4>
+                <div className="skills__items-container">
+                    <div className="skills__item">
                         <img
-                            className="skills-img"
+                            className="skills__img"
                             src={JavaScript}
                             alt="JavaScript"
                         />
                         <p>Javascript</p>
                     </div>
-                    <div className="skills-item">
-                        <img className="skills-img" src={jQuery} alt="jQuery" />
+                    <div className="skills__item">
+                        <img
+                            className="skills__img"
+                            src={jQuery}
+                            alt="jQuery"
+                        />
                         <p>jQuery</p>
                     </div>
-                    <div className="skills-item">
-                        <img className="skills-img" src={_React} alt="React" />
+                    <div className="skills__item">
+                        <img className="skills__img" src={_React} alt="React" />
                         <p>React</p>
                     </div>
-                    <div className="skills-item">
+                    <div className="skills__item">
                         <img
-                            className="skills-img"
+                            className="skills__img"
                             src={ReactRouter}
                             alt="React Router"
                         />
@@ -91,50 +95,58 @@ const Skills = () => (
                 </div>
             </div>
 
-            <div className="skills-list-category fade-item">
-                <h4>Build Tools</h4>
-                <div className="skills-items-container">
-                    <div className="skills-item">
-                        <img className="skills-img" src={NPM} alt="NPM" />
+            <div className="skills__category fade-item">
+                <h4 className="skills__category-title">Build Tools</h4>
+                <div className="skills__items-container">
+                    <div className="skills__item">
+                        <img className="skills__img" src={NPM} alt="NPM" />
                         <p>NPM</p>
                     </div>
-                    <div className="skills-item">
-                        <img className="skills-img" src={Gulp} alt="Gulp" />
+                    <div className="skills__item">
+                        <img className="skills__img" src={Gulp} alt="Gulp" />
                         <p>Gulp</p>
                     </div>
                 </div>
             </div>
 
-            <div className="skills-list-category fade-item">
-                <h4>Other</h4>
-                <div className="skills-items-container">
-                    <div className="skills-item">
-                        <img className="skills-img" src={GitHub} alt="GitHub" />
+            <div className="skills__category fade-item">
+                <h4 className="skills__category-title">Other</h4>
+                <div className="skills__items-container">
+                    <div className="skills__item">
+                        <img
+                            className="skills__img"
+                            src={GitHub}
+                            alt="GitHub"
+                        />
                         <p>GitHub</p>
                     </div>
-                    <div className="skills-item">
-                        <img className="skills-img" src={ESLint} alt="ESLint" />
+                    <div className="skills__item">
+                        <img
+                            className="skills__img"
+                            src={ESLint}
+                            alt="ESLint"
+                        />
                         <p>ESLint</p>
                     </div>
-                    <div className="skills-item">
+                    <div className="skills__item">
                         <img
-                            className="skills-img"
+                            className="skills__img"
                             src={Photoshop}
                             alt="Photoshop"
                         />
                         <p>Photoshop</p>
                     </div>
-                    <div className="skills-item">
+                    <div className="skills__item">
                         <img
-                            className="skills-img"
+                            className="skills__img"
                             src={Math}
                             alt="Mathematics"
                         />
                         <p>Mathematics</p>
                     </div>
-                    <div className="skills-item">
+                    <div className="skills__item">
                         <img
-                            className="skills-img"
+                            className="skills__img"
                             src={Spanish}
                             alt="Spanish"
                         />
