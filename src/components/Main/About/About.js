@@ -4,9 +4,9 @@ import "./About.scss";
 
 const About = () => (
     <section className="about light-page">
-        <h3 className="fade-item">About</h3>
+        <h3>About</h3>
         <div className="about__content">
-            <p className="indent fade-item">
+            <p className="indent">
                 I am an <span className="dark-text-span">avid learner</span>{" "}
                 with a mission to use my skills to uplift others. After teaching
                 math for eight years I became frustrated with the education
@@ -15,7 +15,7 @@ const About = () => (
                 and <span className="dark-text-span">communication</span> skills
                 to web development.
             </p>
-            <p className="indent fade-item">
+            <p className="indent">
                 While completing a{" "}
                 <span className="dark-text-span">Front-End Web Developer</span>{" "}
                 Nanodegree through Udacity, I leveled up my coding abilities and
@@ -26,7 +26,7 @@ const About = () => (
                 , making and handling API calls, and build tools that automate
                 time consuming aspects of development.
             </p>
-            <p className="indent fade-item">
+            <p className="indent">
                 I spend most of my free time building apps that challenge me to
                 grow in my understanding of the latest technologies. My goal is
                 to continue increasing my talents to one day create tech that

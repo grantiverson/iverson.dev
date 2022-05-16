@@ -19,11 +19,7 @@ const ProjectLinks = ({ showProjects, setShowProjects }) => {
         { text: "React", onClick: () => setShowProjects(ProjectTypes.REACT) },
     ];
 
-    return (
-        <div className="fade-item">
-            <NavLinks active={ProjectTypes[showProjects]} {...{ links }} />
-        </div>
-    );
+    return <NavLinks active={ProjectTypes[showProjects]} {...{ links }} />;
 };
 
 export default ProjectLinks;

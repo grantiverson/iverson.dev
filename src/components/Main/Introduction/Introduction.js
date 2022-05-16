@@ -11,7 +11,7 @@ const Introduction = () => {
 
     return (
         <section className="introduction dark-page">
-            <div className="introduction__content fade-item">
+            <div className="introduction__content">
                 <img className="introduction__logo" src={Logo} alt="Logo" />
                 <div className="introduction__text">
                     <h1>

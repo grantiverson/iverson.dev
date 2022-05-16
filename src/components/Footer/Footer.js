@@ -10,10 +10,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <button
-                className="footer__back-to-top-button fade-item"
-                {...{ onClick }}
-            >
+            <button className="footer__back-to-top-button" {...{ onClick }}>
                 Back to top
             </button>
             <p className="footer__text">

@@ -50,7 +50,7 @@ const Project = ({
     };
 
     return (
-        <div className="project fade-item">
+        <div className="project">
             <a href={url} target="_blank" rel="noreferrer">
                 <img className="project__screen-shot" src={ss} alt={title} />
                 <div className="project__overlay">

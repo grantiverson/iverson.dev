@@ -12,7 +12,7 @@ const Projects = () => {
 
     return (
         <section className="projects dark-page">
-            <h3 className="fade-item">Projects</h3>
+            <h3>Projects</h3>
 
             <ProjectLinks {...{ showProjects, setShowProjects }} />
 

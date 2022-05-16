@@ -8,12 +8,12 @@ import "./Contact.scss";
 
 const Contact = () => (
     <section id="contact" className="contact light-page">
-        <h3 className="fade-item">Contact</h3>
-        <p className="contact__content fade-item">
+        <h3>Contact</h3>
+        <p className="contact__content">
             If you are interested in creating a web presence, or are looking to
             hire a developer, contact me at the information below.
         </p>
-        <div className="contact__links fade-item">
+        <div className="contact__links">
             <div className="contact__icons">
                 <p>
                     <Envelope />
