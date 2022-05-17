@@ -10,13 +10,7 @@ const NavLink = ({ active, onClick, text }) => {
 
     return (
         <li className="nav-links__link">
-            <span
-                {...{
-                    className,
-                    // onClick
-                }}
-                role="link"
-            >
+            <span {...{ className, onClick }} role="link">
                 {text}
             </span>
         </li>
