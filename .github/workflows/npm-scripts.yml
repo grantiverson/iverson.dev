@@ -28,10 +28,14 @@ jobs:
                   cache: "npm"
 
             - run: npm ci
-            - run: |
-                  for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-                      npm run lint $file
-                  done
+            - name: Run eslint on changed files
+              uses: tj-actions/eslint-changed-files@v11
+              with:
+                  config_path: "/path/to/.eslintrc"
+                  ignore_path: "/path/to/.eslintignore"
+                  extra_args: "--max-warnings=0"
+                  file_extensions: |
+                      **/*.js
             - run: |
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
                       npm run format $file
