@@ -28,7 +28,10 @@ jobs:
                   cache: "npm"
 
             - run: npm ci
-            - run: npm run lint
+            - run: |
+                  for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+                    npm run lint $file
+                  done
             - run: |
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
                     npm run format $file
