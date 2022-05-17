@@ -1,0 +1,12 @@
+name: "Test Formatting With Prettier"
+
+jobs:
+    format:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check changed files with Prettier
+              run: |
+                  for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+                      npm run format $file
+                  done
