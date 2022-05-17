@@ -8,7 +8,7 @@ const constants = {
             4: "React",
             ALL: 0,
             "HTML/CSS": 1,
-            JS: 2,
+            JavaScript: 2,
             MATH: 3,
             REACT: 4,
         },

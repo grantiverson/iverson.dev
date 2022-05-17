@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import constants from "../../../core/constants";
 
@@ -31,7 +32,7 @@ const Projects = ({ showProjects }) => {
                 "App inspired by classic arcade game Frogger built with OOJS and HTML5 Canvas. Wrote all code to control character movement, check for collisions, and keep track of score and lives.",
             repositoryUrl: "https://github.com/grantiverson/arcade-game",
             ss: Images.arcadeGame,
-            technologies: [ProjectTypes.JS],
+            technologies: [ProjectTypes.JavaScript],
             title: "Arcade Game",
             url: "https://iverson.io/projects/arcade-game",
         },
@@ -40,7 +41,7 @@ const Projects = ({ showProjects }) => {
                 "Memory matching game uses JavaScript to manipulate the DOM. JS generates and shuffles cards, handles clicks, checks for matches, calculates score, and runs timer.",
             repositoryUrl: "https://github.com/grantiverson/concentration",
             ss: Images.concentration,
-            technologies: [ProjectTypes["HTML/CSS"], ProjectTypes.JS],
+            technologies: [ProjectTypes["HTML/CSS"], ProjectTypes.JavaScript],
             title: "Concentration Game",
             url: "https://iverson.io/projects/concentration",
         },
@@ -49,7 +50,7 @@ const Projects = ({ showProjects }) => {
                 "Working solar system model uses OOJS and HTML5 Canvas. Mathematical parametric formulas control the movement of the various planets and moon.",
             repositoryUrl: "https://github.com/grantiverson/solar-system",
             ss: Images.solarSystem,
-            technologies: [ProjectTypes.JS, ProjectTypes.MATH],
+            technologies: [ProjectTypes.JavaScript, ProjectTypes.MATH],
             title: "Solar System Model",
             url: "https://iverson.io/projects/solar-system",
         },
@@ -58,7 +59,7 @@ const Projects = ({ showProjects }) => {
                 "I got the idea for this program from a math textbook. It gave a set of steps for generating Sierpinski's triangle by hand using probability. I did it with code instead.",
             repositoryUrl: "https://github.com/grantiverson/sierpinski",
             ss: Images.sierpinski,
-            technologies: [ProjectTypes.JS, ProjectTypes.MATH],
+            technologies: [ProjectTypes.JavaScript, ProjectTypes.MATH],
             title: "Sierpinski's Triangle",
             url: "https://iverson.io/projects/sierpinski",
         },
@@ -70,13 +71,17 @@ const Projects = ({ showProjects }) => {
                 .filter(
                     (project) =>
                         showProjects === ProjectTypes.ALL ||
-                        project.technologies.includes(showProjects)
+                        project.technologies.includes(showProjects),
                 )
                 .map((project, key) => (
                     <Project {...project} {...{ key }} />
                 ))}
         </div>
     );
+};
+
+Projects.propTypes = {
+    showProjects: PropTypes.number.isRequired,
 };
 
 export default Projects;

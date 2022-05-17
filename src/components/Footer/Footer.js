@@ -10,7 +10,11 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <button className="footer__back-to-top-button" {...{ onClick }}>
+            <button
+                className="footer__back-to-top-button"
+                type="button"
+                {...{ onClick }}
+            >
                 Back to top
             </button>
             <p className="footer__text">

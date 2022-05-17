@@ -15,7 +15,10 @@ module.exports = {
     rules: {
         indent: "off",
         quotes: "off",
+        "import/no-cycle": "off",
+        "object-curly-newline": "off",
         "implicit-arrow-linebreak": "off",
+        "operator-linebreak": "off",
         "react/function-component-definition": [
             "warn",
             {
@@ -29,5 +32,7 @@ module.exports = {
             { extensions: [".js", ".jsx"] },
         ],
         "react/jsx-indent-props": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-props-no-spreading": "off",
     },
 };

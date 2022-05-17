@@ -1,9 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import constants from "../../../core/constants";
 
 import Images from "../../../images";
 import { GitHub } from "../../common/FontAwesome/brands";
+import { ProjectImage } from ".";
 
 import "./Project.scss";
 
@@ -17,14 +19,6 @@ const Project = ({
 }) => {
     const { ProjectTypes } = constants.ENUMS;
 
-    const ProjectImage = ({ alt, src }) => (
-        <img
-            className="project__technology"
-            {...{ src }}
-            alt={ProjectTypes[alt]}
-        />
-    );
-
     const images = {
         [ProjectTypes["HTML/CSS"]]: (
             <>
@@ -32,10 +26,10 @@ const Project = ({
                     alt={ProjectTypes["HTML/CSS"]}
                     src={Images.html}
                 />
-                <ProjectImage alt={ProjectTypes.CSS} src={Images.css} />
+                <ProjectImage alt={ProjectTypes["HTML/CSS"]} src={Images.css} />
             </>
         ),
-        [ProjectTypes.JS]: (
+        [ProjectTypes.JavaScript]: (
             <ProjectImage
                 alt={ProjectTypes.JavaScript}
                 src={Images.javascript}
@@ -75,6 +69,15 @@ const Project = ({
             </a>
         </div>
     );
+};
+
+Project.propTypes = {
+    description: PropTypes.string.isRequired,
+    repositoryUrl: PropTypes.string.isRequired,
+    ss: PropTypes.string.isRequired,
+    technologies: PropTypes.arrayOf(PropTypes.number).isRequired,
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
 };
 
 export default Project;

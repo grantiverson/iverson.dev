@@ -8,6 +8,7 @@ import "./Introduction.scss";
 const Introduction = () => {
     const onClick = () =>
         document.querySelector(".about").scrollIntoView({ behavior: "smooth" });
+    const onKeyDown = onClick;
 
     return (
         <section className="introduction dark-page">
@@ -32,12 +33,18 @@ const Introduction = () => {
             </div>
             <div className="introduction__teaser">
                 <p>I make web apps and solve problems.</p>
-                <img
-                    className="introduction__arrow"
-                    src={Arrow}
-                    alt="Arrow"
-                    {...{ onClick }}
-                />
+                <span
+                    onClick={onClick}
+                    onKeyDown={onKeyDown}
+                    tabIndex={0}
+                    role="button"
+                >
+                    <img
+                        className="introduction__arrow"
+                        src={Arrow}
+                        alt="Arrow"
+                    />
+                </span>
             </div>
         </section>
     );
