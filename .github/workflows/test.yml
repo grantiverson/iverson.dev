@@ -31,4 +31,4 @@ jobs:
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
                     npm run format $file
                   done
-            - run: npm test:coverage
+            - run: npm run test:coverage
