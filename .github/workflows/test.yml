@@ -30,13 +30,14 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
 
-            - name: Jest coverage report
-              uses: ArtiomTr/jest-coverage-report-action@v2.0.6
-
             - run: npm ci
             - run: npm run lint
             - run: |
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
                     npm run format $file
                   done
-            - run: npm run test:coverage
+
+            - name: Jest coverage report
+              uses: ArtiomTr/jest-coverage-report-action@v2.0.6
+              with:
+                  test-script: npm run test:coverage
