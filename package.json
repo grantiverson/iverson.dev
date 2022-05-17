@@ -27,8 +27,7 @@
         "format": "prettier --check",
         "lint": "eslint --ext .js src/",
         "start": "react-scripts start",
-        "test": "react-scripts test",
-        "test:coverage": "CI=true npm test -- --env=jsdom --coverage"
+        "test": "react-scripts test"
     },
     "eslintConfig": {
         "extends": [
