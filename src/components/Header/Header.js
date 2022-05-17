@@ -18,8 +18,6 @@ const Header = () => {
         { text: "Contact", onClick: () => handleClick("contact") },
     ];
 
-    console.log("foo");
-
     return (
         <header className="header">
             <span
