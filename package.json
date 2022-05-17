@@ -28,7 +28,7 @@
         "lint": "eslint --ext .js src/",
         "start": "react-scripts start",
         "test": "react-scripts test",
-        "test:coverage": "npm test -- --env=jsdom"
+        "test:coverage": "CI=true npm test -- --env=jsdom"
     },
     "eslintConfig": {
         "extends": [
