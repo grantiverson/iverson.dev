@@ -13,7 +13,7 @@ module.exports = {
     },
     plugins: ["react"],
     rules: {
-        indent: "none",
-        quotes: "none",
+        indent: "off",
+        quotes: "off",
     },
 };
