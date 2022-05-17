@@ -13,6 +13,7 @@
         "@testing-library/user-event": "^14.2.0",
         "babel-plugin-macros": "^3.1.0",
         "classnames": "^2.3.1",
+        "eslint": "^8.15.0",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "react-scripts": "5.0.1",
@@ -20,11 +21,13 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
+        "deploy": "react-scripts build && firebase deploy --only hosting",
         "eject": "react-scripts eject",
-        "deploy": "react-scripts build && firebase deploy --only hosting"
+        "format": "prettier --check",
+        "lint": "eslint --ext .js src/",
+        "start": "react-scripts start",
+        "test": "react-scripts test"
     },
     "eslintConfig": {
         "extends": [
