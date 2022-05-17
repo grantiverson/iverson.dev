@@ -59,8 +59,8 @@ const Skills = () => {
         <section className="skills light2-page">
             <h3>Skills</h3>
             <div className="skills__list">
-                {categories.map((category, i) => (
-                    <SkillsCategory {...category} key={i} />
+                {categories.map((category) => (
+                    <SkillsCategory {...category} key={category.category} />
                 ))}
             </div>
         </section>

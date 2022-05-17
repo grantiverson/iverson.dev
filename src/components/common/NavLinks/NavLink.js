@@ -5,12 +5,18 @@ import classNames from "classnames";
 const NavLink = ({ active, onClick, text }) => {
     const className = classNames(
         "nav-links__link-text",
-        active === text && "nav-links__link-text--active"
+        active === text && "nav-links__link-text--active",
     );
 
     return (
         <li className="nav-links__link">
-            <span {...{ className, onClick }} role="link">
+            <span
+                {...{ className }}
+                onClick={onClick}
+                onKeyDown={onClick}
+                role="link"
+                tabIndex={0}
+            >
                 {text}
             </span>
         </li>
@@ -18,8 +24,13 @@ const NavLink = ({ active, onClick, text }) => {
 };
 
 NavLink.propTypes = {
-    text: PropTypes.string.isRequired,
+    active: PropTypes.string,
     onClick: PropTypes.func.isRequired,
+    text: PropTypes.string.isRequired,
+};
+
+NavLink.defaultProps = {
+    active: "",
 };
 
 export default NavLink;

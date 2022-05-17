@@ -1,26 +1,47 @@
+import arcadeGame from "./projects-arcade-game.jpg";
+import arrow from "./arrow.png";
+import concentration from "./projects-concentration.jpg";
+import css from "./skills-css3.png";
+import eslint from "./skills-eslint.png";
+import github from "./skills-github.png";
+import gulp from "./skills-gulp.png";
+import html from "./skills-html5.png";
+import jQuery from "./skills-jquery.png";
+import javascript from "./skills-javascript.png";
+import logo from "./logo.png";
+import math from "./skills-math.png";
+import npm from "./skills-npm.png";
+import photoshop from "./skills-photoshop.png";
+import react from "./skills-react.png";
+import reactRouter from "./skills-react-router.png";
+import sass from "./skills-sass.png";
+import sierpinski from "./projects-sierpinski.jpg";
+import solarSystem from "./projects-solar-system.jpg";
+import spanish from "./skills-spanish.png";
+import veggieFinder from "./projects-veggie-finder.jpg";
+
 const Images = {
-    arcadeGame: require("./projects-arcade-game.jpg"),
-    arrow: require("./arrow.png"),
-    concentration: require("./projects-concentration.jpg"),
-    css: require("./skills-css3.png"),
-    eslint: require("./skills-eslint.png"),
-    github: require("./skills-github.png"),
-    gulp: require("./skills-gulp.png"),
-    html: require("./skills-html5.png"),
-    index: require("./index.js"),
-    jQuery: require("./skills-jquery.png"),
-    javascript: require("./skills-javascript.png"),
-    logo: require("./logo.png"),
-    math: require("./skills-math.png"),
-    npm: require("./skills-npm.png"),
-    photoshop: require("./skills-photoshop.png"),
-    react: require("./skills-react.png"),
-    reactRouter: require("./skills-react-router.png"),
-    sass: require("./skills-sass.png"),
-    sierpinski: require("./projects-sierpinski.jpg"),
-    solarSystem: require("./projects-solar-system.jpg"),
-    spanish: require("./skills-spanish.png"),
-    veggieFinder: require("./projects-veggie-finder.jpg"),
+    arcadeGame,
+    arrow,
+    concentration,
+    css,
+    eslint,
+    github,
+    gulp,
+    html,
+    jQuery,
+    javascript,
+    logo,
+    math,
+    npm,
+    photoshop,
+    react,
+    reactRouter,
+    sass,
+    sierpinski,
+    solarSystem,
+    spanish,
+    veggieFinder,
 };
 
 export default Images;

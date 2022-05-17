@@ -23,6 +23,11 @@ const Header = () => {
             <span
                 className="header__button"
                 onClick={() => setShowNav(!showNav)}
+                onKeyDown={() => {
+                    setShowNav(!showNav);
+                }}
+                role="button"
+                tabIndex={0}
             >
                 <Bars />
             </span>
