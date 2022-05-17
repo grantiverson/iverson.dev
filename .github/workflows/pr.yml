@@ -30,8 +30,11 @@ jobs:
                   file_extensions: |
                       **/*.js
 
-            - name: Check changed files with Prettier
+            - name: Get changed files
+              id: changed-files
               uses: tj-actions/changed-files@v20
+
+            - name: Check changed files with Prettier
               run: npm run format ${{ steps.changed-files.outputs.all_changed_files }}
 
             - uses: ArtiomTr/jest-coverage-report-action@v2
