@@ -31,11 +31,8 @@ jobs:
                       **/*.js
 
             - name: Check changed files with Prettier
-              run: |
-                  for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-                      npm run format $file
-                  done
               uses: tj-actions/changed-files@v20
+              run: npm run format ${{ steps.changed-files.outputs.all_changed_files }}
 
             - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
