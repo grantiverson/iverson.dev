@@ -11,15 +11,15 @@ describe(`<Header />`, () => {
         expect(banner).toBeInTheDocument();
     });
 
-    it("renders nav links", () => {
-        render(<Header />);
+    // it("renders nav links", () => {
+    //     render(<Header />);
 
-        const navigation = screen.getByRole("navigation");
-        const list = screen.getByRole("list");
-        const listitems = screen.getAllByRole("listitem");
+    //     const navigation = screen.getByRole("navigation");
+    //     const list = screen.getByRole("list");
+    //     const listitems = screen.getAllByRole("listitem");
 
-        expect(navigation).toBeInTheDocument();
-        expect(list).toBeInTheDocument();
-        expect(listitems.length).toBe(4);
-    });
+    //     expect(navigation).toBeInTheDocument();
+    //     expect(list).toBeInTheDocument();
+    //     expect(listitems.length).toBe(4);
+    // });
 });
