@@ -33,9 +33,8 @@ jobs:
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
                     npm run format $file
                   done
-            - run: npm run test:coverage
+
             - name: Add test coverage report
               uses: ArtiomTr/jest-coverage-report-action@v2
               with:
-                  # test-script: npm run test:coverage
-                  coverage-file: report.json
+                  test-script: npm run test:coverage
