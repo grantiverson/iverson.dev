@@ -3,10 +3,14 @@ name: "Check PR"
 on: pull_request
 
 jobs:
-    lint:
+    build:
         runs-on: ubuntu-latest
 
-        name: Lint changed JS files
+        name: Check changed files
+
+        permissions:
+            checks: write
+            pull-requests: write
 
         steps:
             - uses: actions/checkout@v3
@@ -26,14 +30,6 @@ jobs:
                   file_extensions: |
                       **/*.js
 
-    format:
-        runs-on: ubuntu-latest
-
-        name: Check changed files' formatting
-
-        steps:
-            - uses: actions/checkout@v3
-
             - name: Get changed files
               id: changed-files
               uses: tj-actions/changed-files@v20
@@ -43,18 +39,6 @@ jobs:
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
                       npm run format $file
                   done
-
-    coverage:
-        permissions:
-            checks: write
-            pull-requests: write
-
-        runs-on: ubuntu-latest
-
-        name: Generate test coverage report
-
-        steps:
-            - uses: actions/checkout@v3
 
             - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
