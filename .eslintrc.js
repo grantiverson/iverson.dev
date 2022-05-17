@@ -15,5 +15,19 @@ module.exports = {
     rules: {
         indent: "off",
         quotes: "off",
+        "implicit-arrow-linebreak": "off",
+        "react/function-component-definition": [
+            "warn",
+            {
+                namedComponents: "arrow-function",
+                unnamedComponents: "arrow-function",
+            },
+        ],
+        "react/jsx-indent": "off",
+        "react/jsx-filename-extension": [
+            "warn",
+            { extensions: [".js", ".jsx"] },
+        ],
+        "react/jsx-indent-props": "off",
     },
 };
