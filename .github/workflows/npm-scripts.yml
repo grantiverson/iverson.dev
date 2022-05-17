@@ -34,7 +34,9 @@ jobs:
                   config_path: ".eslintrc.js"
                   file_extensions: |
                       **/*.js
-            - run: |
+
+            - name: Check changed files with Prettier
+              run: |
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
                       npm run format $file
                   done
