@@ -15,7 +15,7 @@ const Header = () => {
         { text: "About", onClick: () => handleClick("about") },
         { text: "Projects", onClick: () => handleClick("projects") },
         { text: "Skills", onClick: () => handleClick("skills") },
-        { text: "Contact", onClick: () => handleClick("contact") },
+        { text: "Contact", onClick: () = handleClick("contact") },
     ];
 
     return (
