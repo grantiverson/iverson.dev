@@ -6,7 +6,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
-        name: Automated FE checks
+        name: FE checks
 
         permissions:
             checks: write
@@ -37,7 +37,8 @@ jobs:
             - name: Check changed files with Prettier
               run: npm run format ${{ steps.changed-files.outputs.all_changed_files }}
 
-            - uses: ArtiomTr/jest-coverage-report-action@v2
+            - name: Add test coverage report
+              uses: ArtiomTr/jest-coverage-report-action@v2
               with:
                   test-script: npm run test:coverage
                   skip-step: install
