@@ -1,49 +1,43 @@
-name: "NPM Scripts"
+# name: "NPM Scripts"
 
-on: pull_request
+# on: pull_request
 
-jobs:
-    build:
-        permissions:
-            checks: write
-            pull-requests: write
+# jobs:
+#     build:
+#         permissions:
+#             checks: write
+#             pull-requests: write
 
-        runs-on: ubuntu-latest
+#         runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [16.x]
+#         strategy:
+#             matrix:
+#                 node-version: [16.x]
 
-        steps:
-            - uses: actions/checkout@v3
+#         steps:
+#             - uses: actions/checkout@v3
 
-            - name: Get changed files
-              id: changed-files
-              uses: tj-actions/changed-files@v20
+#             - name: Get changed files
+#               id: changed-files
+#               uses: tj-actions/changed-files@v20
 
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v3
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "npm"
+#             - name: Use Node.js ${{ matrix.node-version }}
+#               uses: actions/setup-node@v3
+#               with:
+#                   node-version: ${{ matrix.node-version }}
+#                   cache: "npm"
 
-            - run: npm ci
-            - name: Run eslint on changed files
-              uses: tj-actions/eslint-changed-files@v11
-              with:
-                  config_path: ".eslintrc.js"
-                  file_extensions: |
-                      **/*.js
+#             - run: npm ci
 
-            - name: Check changed files with Prettier
-              run: |
-                  for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-                      npm run format $file
-                  done
+#             - name: Check changed files with Prettier
+#               run: |
+#                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+#                       npm run format $file
+#                   done
 
-            - name: Add test coverage report
-              uses: ArtiomTr/jest-coverage-report-action@v2
-              with:
-                  test-script: npm run test:coverage
-                  skip-step: install
-                  annotations: failed-tests
+#             - name: Add test coverage report
+#               uses: ArtiomTr/jest-coverage-report-action@v2
+#               with:
+#                   test-script: npm run test:coverage
+#                   skip-step: install
+#                   annotations: failed-tests
