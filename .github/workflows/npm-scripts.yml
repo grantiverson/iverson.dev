@@ -30,11 +30,11 @@ jobs:
             - run: npm ci
             - run: |
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-                    npm run lint $file
+                      npm run lint $file
                   done
             - run: |
                   for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-                    npm run format $file
+                      npm run format $file
                   done
 
             - name: Add test coverage report
