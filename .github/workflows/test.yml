@@ -29,8 +29,8 @@ jobs:
                   cache: "npm"
             - run: npm ci
             - run: |
-              for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-                echo "$file was changed"
-                # npm run format
-              done
+                  for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+                    echo "$file was changed"
+                    # npm run format
+                  done
             - run: npm test
