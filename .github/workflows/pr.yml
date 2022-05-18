@@ -28,6 +28,7 @@ jobs:
               uses: tj-actions/changed-files@v20
 
             - name: Check changed files with ESLint
+              if: contains(steps.changed-files.outputs.modified_files, '.js')
               run: npm run lint ${{ steps.changed-files.outputs.all_changed_files }}
 
             - name: Check changed files with Prettier
