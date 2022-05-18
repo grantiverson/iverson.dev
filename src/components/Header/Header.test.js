@@ -21,7 +21,5 @@ describe(`<Header />`, () => {
         expect(navigation).toBeInTheDocument();
         expect(list).toBeInTheDocument();
         expect(listitems.length).toBe(4);
-
-        expect(3).toBe(4);
     });
 });
