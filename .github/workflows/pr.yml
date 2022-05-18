@@ -9,7 +9,7 @@ jobs:
         name: NPM install and build
 
         steps:
-            - uses: actions/checkoutv3
+            - uses: actions/checkout@v3
 
             - name: Install dependencies
               run: |
