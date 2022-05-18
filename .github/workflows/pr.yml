@@ -24,8 +24,6 @@ jobs:
     lint:
         runs-on: ubuntu-latest
 
-        needs: build
-
         name: Lint changed files
 
         steps:
@@ -47,8 +45,6 @@ jobs:
     format:
         runs-on: ubuntu-latest
 
-        needs: build
-
         name: Check formatting of changed files
 
         steps:
@@ -66,8 +62,6 @@ jobs:
 
     test:
         runs-on: ubuntu-latest
-
-        needs: build
 
         name: Create test coverage report
 
