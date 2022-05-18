@@ -43,6 +43,8 @@ jobs:
 
         name: Lint changed files
 
+        needs: build
+
         steps:
             - uses: actions/checkout@v3
 
