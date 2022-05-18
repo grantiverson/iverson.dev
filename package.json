@@ -25,7 +25,7 @@
         "deploy": "react-scripts build && firebase deploy --only hosting",
         "eject": "react-scripts eject",
         "format": "prettier --check",
-        "lint": "eslint --ext .js",
+        "lint": "eslint --ext .js --config .eslintrc.js",
         "start": "react-scripts start",
         "test": "react-scripts test",
         "test:coverage": "CI=true npm test -- --env=jsdom --coverage"
