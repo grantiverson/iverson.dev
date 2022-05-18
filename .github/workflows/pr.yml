@@ -6,22 +6,34 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
-        name: FE checks
-
-        permissions:
-            checks: write
-            pull-requests: write
+        name: NPM install and build
 
         steps:
             - uses: actions/checkout@v3
 
             - uses: actions/setup-node@v3
               with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "npm"
+                  node-version: 16
 
             - name: Install dependencies
-              run: npm ci
+              run: |
+                  npm install
+                  npm run build
+
+    lint:
+        runs-on: ubuntu-latest
+
+        name: Lint changed files
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: Install dependencies
+              run: npm install
 
             - name: Get changed files
               id: changed-js-files
@@ -33,6 +45,21 @@ jobs:
             - name: Check changed files with ESLint
               run: npm run lint ${{ steps.changed-js-files.outputs.all_changed_files }}
 
+    format:
+        runs-on: ubuntu-latest
+
+        name: Check formatting of changed files
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: Install dependencies
+              run: npm install
+
             - name: Get changed files
               id: changed-files
               uses: tj-actions/changed-files@v20
@@ -40,9 +67,30 @@ jobs:
             - name: Check changed files with Prettier
               run: npm run format ${{ steps.changed-files.outputs.all_changed_files }}
 
+    test:
+        runs-on: ubuntu-latest
+
+        name: Create test coverage report
+
+        permissions:
+            checks: write
+            pull-requests: write
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: Install dependencies
+              run: npm install
+
             - name: Run tests and add coverage report
               uses: ArtiomTr/jest-coverage-report-action@v2
               with:
                   test-script: npm run test:coverage
                   skip-step: install
                   annotations: failed-tests
+              env:
+                  CI: true
