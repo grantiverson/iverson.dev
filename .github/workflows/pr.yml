@@ -31,10 +31,8 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - uses: actions/download-artifact@v3
-              with:
-                  name: npm-build
-                  path: public/
+            - name: Install dependencies
+              run: npm install
 
             - name: Get changed files
               id: changed-js-files
@@ -56,10 +54,8 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - uses: actions/download-artifact@v3
-              with:
-                  name: npm-build
-                  path: public/
+            - name: Install dependencies
+              run: npm install
 
             - name: Get changed files
               id: changed-files
@@ -82,10 +78,8 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - uses: actions/download-artifact@v3
-              with:
-                  name: npm-build
-                  path: public/
+            - name: Install dependencies
+              run: npm install
 
             - name: Run tests and add coverage report
               uses: ArtiomTr/jest-coverage-report-action@v2
