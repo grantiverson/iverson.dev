@@ -69,3 +69,5 @@ jobs:
                   test-script: npm run test:coverage
                   skip-step: install
                   annotations: failed-tests
+              env:
+                  CI: true
