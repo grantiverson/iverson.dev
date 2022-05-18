@@ -32,12 +32,10 @@ const Header = () => {
                 <Bars />
             </span>
 
-            {/*
             <NavLinks
                 {...{ links }}
                 style={showNav ? { marginTop: 0 } : null}
             />
-            */}
         </header>
     );
 };
