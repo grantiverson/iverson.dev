@@ -24,6 +24,8 @@ jobs:
     test:
         runs-on: ubuntu-latest
 
+        needs: build
+
         name: Check changed files and create test coverage report
 
         permissions:
