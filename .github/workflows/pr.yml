@@ -13,8 +13,8 @@ jobs:
 
             - name: Install dependencies
               uses: actions/setup-node@v3
-                with:
-                    node-version: 16
+              with:
+                  node-version: 16
               run: |
                   npm install
                   npm run build
@@ -29,8 +29,8 @@ jobs:
 
             - name: Install dependencies
               uses: actions/setup-node@v3
-                with:
-                    node-version: 16
+              with:
+                  node-version: 16
 
             - name: Get changed files
               id: changed-js-files
@@ -52,8 +52,8 @@ jobs:
 
             - name: Install dependencies
               uses: actions/setup-node@v3
-                with:
-                    node-version: 16
+              with:
+                  node-version: 16
 
             - name: Get changed files
               id: changed-files
@@ -76,8 +76,8 @@ jobs:
 
             - name: Install dependencies
               uses: actions/setup-node@v3
-                with:
-                    node-version: 16
+              with:
+                  node-version: 16
 
             - name: Run tests and add coverage report
               uses: ArtiomTr/jest-coverage-report-action@v2
