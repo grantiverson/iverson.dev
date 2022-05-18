@@ -12,11 +12,11 @@ const Projects = ({ showProjects }) => {
     const projects = [
         {
             description: `I was playing mastermind with my son and thought, "I wonder if I can code this game?" So, I gave it a shot!`,
-            repositoryUrl: "#",
+            repositoryUrl: "https://github.com/grantiverson/mastermind",
             ss: "https://placekitten.com/500/333",
             technologies: [ProjectTypes.REACT],
             title: "Mastermind Game",
-            url: "#",
+            url: "https://grantiverson.github.io/mastermind/",
         },
         {
             description:
