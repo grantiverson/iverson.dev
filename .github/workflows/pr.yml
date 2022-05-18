@@ -23,16 +23,12 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
-            - name: Check changed files with ESLint
-              uses: tj-actions/eslint-changed-files@v11
-              with:
-                  config_path: ".eslintrc.js"
-                  file_extensions: |
-                      **/*.js
-
             - name: Get changed files
               id: changed-files
               uses: tj-actions/changed-files@v20
+
+            - name: Check changed files with ESLint
+              run: npm run lint --config .eslintrc.js --ext .js ${{ steps.changed-files.outputs.all_changed_files }}
 
             - name: Check changed files with Prettier
               run: npm run format ${{ steps.changed-files.outputs.all_changed_files }}
