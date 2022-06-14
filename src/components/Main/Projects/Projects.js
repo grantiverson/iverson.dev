@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import constants from "../../../core/constants";
 
-import { ProjectLinks, ProjectsList } from ".";
+import ProjectLinks from "./ProjectLinks";
+import ProjectsList from "./ProjectsList";
 
 import "./Projects.scss";
 
