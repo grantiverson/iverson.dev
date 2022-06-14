@@ -2,7 +2,7 @@ import React from "react";
 
 import Images from "../../../images";
 
-import { SkillsCategory } from ".";
+import SkillsCategory from "./SkillsCategory";
 
 import "./Skills.scss";
 

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import constants from "../../../core/constants";
 
 import Images from "../../../images";
-import { Project } from ".";
+import Project from "./Project";
 
 const Projects = ({ showProjects }) => {
     const { ProjectTypes } = constants.ENUMS;

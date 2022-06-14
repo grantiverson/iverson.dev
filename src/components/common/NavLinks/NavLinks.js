@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { NavLink } from ".";
+import NavLink from "./NavLink";
 
 import "./NavLinks.scss";
 

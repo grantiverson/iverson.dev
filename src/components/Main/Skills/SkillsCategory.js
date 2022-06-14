@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Skill } from ".";
+import Skill from "./Skill";
 
 const Skills = ({ category, skills }) => (
     <div className="skills__category">

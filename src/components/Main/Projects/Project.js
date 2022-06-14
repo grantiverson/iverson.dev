@@ -5,7 +5,7 @@ import constants from "../../../core/constants";
 
 import Images from "../../../images";
 import { GitHub } from "../../common/FontAwesome/brands";
-import { ProjectImage } from ".";
+import ProjectImage from "./ProjectImage";
 
 import "./Project.scss";
 
