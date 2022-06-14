@@ -3,7 +3,15 @@ module.exports = {
         browser: true,
         es2021: true,
     },
-    extends: ["plugin:react/recommended", "airbnb"],
+    extends: [
+        "plugin:jsdoc/recommended",
+        "plugin:react/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "airbnb",
+        "airbnb/hooks",
+        "prettier",
+    ],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
@@ -11,28 +19,13 @@ module.exports = {
         ecmaVersion: "latest",
         sourceType: "module",
     },
-    plugins: ["react"],
+    plugins: ["jsdoc", "react", "prettier"],
     rules: {
-        indent: "off",
-        quotes: "off",
-        "import/no-cycle": "off",
-        "object-curly-newline": "off",
-        "implicit-arrow-linebreak": "off",
-        "operator-linebreak": "off",
+        "prettier/prettier": ["error"],
         "react/function-component-definition": [
-            "warn",
-            {
-                namedComponents: "arrow-function",
-                unnamedComponents: "arrow-function",
-            },
+            "error",
+            { namedComponents: "arrow-function" },
         ],
-        "react/jsx-indent": "off",
-        "react/jsx-filename-extension": [
-            "warn",
-            { extensions: [".js", ".jsx"] },
-        ],
-        "react/jsx-indent-props": "off",
-        "react/jsx-one-expression-per-line": "off",
-        "react/jsx-props-no-spreading": "off",
+        "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     },
 };
