@@ -2,6 +2,28 @@
     "name": "iverson.dev",
     "version": "2.0.0",
     "private": true,
+    "scripts": {
+        "build": "react-scripts build",
+        "deploy": "react-scripts build && firebase deploy --only hosting",
+        "eject": "react-scripts eject",
+        "format": "prettier --check",
+        "lint": "eslint --ext .js --config .eslintrc.js",
+        "start": "react-scripts start",
+        "test": "react-scripts test",
+        "test:coverage": "npm test -- --env=jsdom --coverage"
+    },
+    "devDependencies": {
+        "eslint": "^8.17.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsdoc": "^39.3.2",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.30.0",
+        "eslint-plugin-react-hooks": "^4.5.0",
+        "prettier": "2.7.0"
+    },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.1.1",
         "@fortawesome/free-brands-svg-icons": "^6.1.1",
@@ -20,22 +42,6 @@
         "sass": "^1.52.3",
         "web-vitals": "^2.1.4"
     },
-    "scripts": {
-        "build": "react-scripts build",
-        "deploy": "react-scripts build && firebase deploy --only hosting",
-        "eject": "react-scripts eject",
-        "format": "prettier --check",
-        "lint": "eslint --ext .js --config .eslintrc.js",
-        "start": "react-scripts start",
-        "test": "react-scripts test",
-        "test:coverage": "npm test -- --env=jsdom --coverage"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
     "browserslist": {
         "production": [
             ">0.2%",
@@ -47,14 +53,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "devDependencies": {
-        "eslint": "^8.17.0",
-        "eslint-config-airbnb": "^19.0.4",
-        "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-jsx-a11y": "^6.5.1",
-        "eslint-plugin-react": "^7.30.0",
-        "eslint-plugin-react-hooks": "^4.5.0",
-        "prettier": "2.7.0"
     }
 }
