@@ -9,8 +9,7 @@
         "lint": "eslint --ext .js --config .eslintrc.js",
         "format": "prettier --check . --ignore-path '.prettierignore'",
         "start": "react-scripts start",
-        "test": "react-scripts test",
-        "test:coverage": "npm test -- --env=jsdom --coverage"
+        "test": "jest"
     },
     "devDependencies": {
         "eslint": "^8.36.0",
@@ -25,7 +24,6 @@
         "prettier": "^2.8.5"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^6.3.0",
         "@fortawesome/free-brands-svg-icons": "^6.3.0",
         "@fortawesome/free-regular-svg-icons": "^6.3.0",
         "@fortawesome/free-solid-svg-icons": "^6.3.0",

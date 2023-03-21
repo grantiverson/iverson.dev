@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 
-const Bars = () => <FontAwesomeIcon icon={solid("bars")} />;
-const Phone = () => <FontAwesomeIcon icon={solid("phone")} />;
+const Bars = () => <FontAwesomeIcon icon={faBars} />;
+const Phone = () => <FontAwesomeIcon icon={faPhone} />;
 
 export { Bars, Phone };
