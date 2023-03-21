@@ -12,7 +12,7 @@ describe(`<NavLinks />`, () => {
                     { text: "Two", onClick: () => {} },
                     { text: "Three", onClick: () => {} },
                 ]}
-            />
+            />,
         );
 
         const navigation = screen.getByRole("navigation");

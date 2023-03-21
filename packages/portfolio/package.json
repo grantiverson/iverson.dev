@@ -6,8 +6,8 @@
         "build": "react-scripts build",
         "deploy": "react-scripts build && firebase deploy --only hosting",
         "eject": "react-scripts eject",
-        "format": "prettier --check",
         "lint": "eslint --ext .js --config .eslintrc.js",
+        "format": "prettier --check . --ignore-path '.prettierignore'",
         "start": "react-scripts start",
         "test": "react-scripts test",
         "test:coverage": "npm test -- --env=jsdom --coverage"
