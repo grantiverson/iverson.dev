@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
@@ -17,12 +18,12 @@ describe(`<NavLinks />`, () => {
 
         const navigation = screen.getByRole("navigation");
         const list = screen.getByRole("list");
-        const listitems = screen.getAllByRole("listitem");
+        const listItems = screen.getAllByRole("listitem");
         const links = screen.getAllByRole("link");
 
         expect(navigation).toBeInTheDocument();
         expect(list).toBeInTheDocument();
-        expect(listitems.length).toBe(3);
+        expect(listItems.length).toBe(3);
         expect(links[0]).toHaveTextContent("One");
         expect(links[1]).toHaveTextContent("Two");
         expect(links[2]).toHaveTextContent("Three");
