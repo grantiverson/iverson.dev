@@ -1,0 +1,12 @@
+{
+    "folders": [
+        { "name": "Root", "path": ".." },
+        {
+            "name": "Portfolio (packages/portfolio)",
+            "path": "../packages/portfolio"
+        }
+    ],
+    "settings": {
+        "jest.disabledWorkspaceFolders": ["Root"]
+    }
+}
