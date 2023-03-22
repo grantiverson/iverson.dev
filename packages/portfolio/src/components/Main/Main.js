@@ -7,7 +7,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 
 const Main = () => (
-    <main id="main">
+    <main className="main">
         <Introduction />
         <About />
         <Projects />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import NavLinks from "../common/NavLinks";
-import { Bars } from "../common/FontAwesome/solid";
+import { Bars } from "../common/FontAwesome";
 
 import "./Header.scss";
 

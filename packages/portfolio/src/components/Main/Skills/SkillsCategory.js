@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Skill from "./Skill";
 
-const Skills = ({ category, skills }) => (
+const SkillsCategory = ({ category, skills }) => (
     <div className="skills__category">
         <h4 className="skills__category-title">{category}</h4>
         <div className="skills__items-container">
@@ -14,9 +14,9 @@ const Skills = ({ category, skills }) => (
     </div>
 );
 
-Skills.propTypes = {
+SkillsCategory.propTypes = {
     category: PropTypes.string.isRequired,
     skills: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
-export default Skills;
+export default SkillsCategory;
