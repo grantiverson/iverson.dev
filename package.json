@@ -6,7 +6,8 @@
         "format": "lerna run format",
         "lint": "lerna run lint",
         "start": "lerna run start",
-        "test": "lerna run test"
+        "test": "lerna run test",
+        "verify": "npm run lint && npm test && npm build"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.20.2",

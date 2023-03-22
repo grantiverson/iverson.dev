@@ -1,96 +1,108 @@
 name: "Check PR"
 
-on: pull_request
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  install-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
 
-        name: NPM install and build
+      - name: Cache npm dependencies
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package.lock') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-        steps:
-            - uses: actions/checkout@v3
+      - name: Install Dependencies
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: npm ci
 
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 16
+  lint:
+    runs-on: ubuntu-latest
+    needs: install-cache
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
 
-            - name: Install dependencies
-              run: |
-                  npm install
-                  npm run build
+      - name: Restore npm dependencies
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package.lock') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-    lint:
-        runs-on: ubuntu-latest
+      - name: Lint JS files
+        run: npm run lint
 
-        name: Lint changed files
+  test:
+    runs-on: ubuntu-latest
+    needs: install-cache
+    permissions:
+      checks: write
+      pull-requests: write
+    strategy:
+      matrix:
+        workspace:
+          - portfolio
 
-        steps:
-            - uses: actions/checkout@v3
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
 
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 16
+      - name: Restore npm dependencies
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package.lock') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-            - name: Install dependencies
-              run: npm install
+      - name: Run tests and add coverage report (${{ matrix.workspace }})
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          annotations: failed-tests
+          skip-step: install
+          working-directory: ./packages/${{ matrix.workspace }}
+        env:
+          CI: true
 
-            - name: Get changed files
-              id: changed-js-files
-              uses: tj-actions/changed-files@v20
-              with:
-                  files: |
-                      **/*.js
+  build:
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
 
-            - name: Check changed files with ESLint
-              run: npm run lint ${{ steps.changed-js-files.outputs.all_changed_files }}
+      - name: Restore npm dependencies
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package.lock') }}
+          restore-keys: ${{ runner.os }}-npm-
 
-    format:
-        runs-on: ubuntu-latest
-
-        name: Check formatting of changed files
-
-        steps:
-            - uses: actions/checkout@v3
-
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 16
-
-            - name: Install dependencies
-              run: npm install
-
-            - name: Get changed files
-              id: changed-files
-              uses: tj-actions/changed-files@v20
-
-            - name: Check changed files with Prettier
-              run: npm run format ${{ steps.changed-files.outputs.all_changed_files }}
-
-    test:
-        runs-on: ubuntu-latest
-
-        name: Create test coverage report
-
-        permissions:
-            checks: write
-            pull-requests: write
-
-        steps:
-            - uses: actions/checkout@v3
-
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 16
-
-            - name: Install dependencies
-              run: npm install
-
-            - name: Run tests and add coverage report
-              uses: ArtiomTr/jest-coverage-report-action@v2
-              with:
-                  test-script: npm run test:coverage
-                  skip-step: install
-                  annotations: failed-tests
-              env:
-                  CI: true
+      - name: Run build
+        run: npm run build
