@@ -1,7 +1,6 @@
 import React from "react";
 
-import Arrow from "../../../images/arrow.png";
-import Logo from "../../../images/logo.png";
+import { arrow, logo } from "../../../images";
 
 import "./Introduction.scss";
 
@@ -13,7 +12,7 @@ const Introduction = () => {
     return (
         <section className="introduction dark-page">
             <div className="introduction__content">
-                <img className="introduction__logo" src={Logo} alt="Logo" />
+                <img className="introduction__logo" src={logo} alt="Logo" />
                 <div className="introduction__text">
                     <h1>
                         #grant-iverson{" "}
@@ -41,7 +40,7 @@ const Introduction = () => {
                 >
                     <img
                         className="introduction__arrow"
-                        src={Arrow}
+                        src={arrow}
                         alt="Arrow"
                     />
                 </span>

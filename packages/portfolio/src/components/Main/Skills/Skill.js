@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Skills = ({ img, skill }) => (
+const Skills = ({ skill, src }) => (
     <div className="skills__item">
-        <img className="skills__img" src={img} alt={skill} />
+        <img className="skills__img" alt={skill} src={src} />
         <p>{skill}</p>
     </div>
 );
 
 Skills.propTypes = {
-    img: PropTypes.string.isRequired,
     skill: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
 };
 
 export default Skills;

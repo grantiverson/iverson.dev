@@ -1,6 +1,6 @@
 import React from "react";
 
-import Images from "../../../images";
+import * as images from "../../../images";
 
 import SkillsCategory from "./SkillsCategory";
 
@@ -11,46 +11,46 @@ const Skills = () => {
         {
             category: "Markup",
             skills: [
-                { skill: "HTML5", img: Images.html },
-                { skill: "JSX", img: Images.react },
-                // { skill: "Twig", img: Images.twig },
+                { skill: "HTML5", src: images.html },
+                { skill: "JSX", src: images.react },
+                // { skill: "Twig", src: images.twig },
             ],
         },
         {
             category: "Styles",
             skills: [
-                { skill: "CSS3", img: Images.css },
-                { skill: "Sass", img: Images.sass },
+                { skill: "CSS3", src: images.css },
+                { skill: "Sass", src: images.sass },
             ],
         },
         {
             category: "JavaScript",
             skills: [
-                { skill: "JavaScript", img: Images.javascript },
-                { skill: "jQuery", img: Images.jQuery },
-                { skill: "React", img: Images.react },
-                // { skill: "Redux", img: Images.redux },
-                { skill: "React Router", img: Images.reactRouter },
-                // { skill: "amCharts", img: Images.amcharts },
+                { skill: "JavaScript", src: images.javascript },
+                { skill: "jQuery", src: images.jQuery },
+                { skill: "React", src: images.react },
+                // { skill: "Redux", src: images.redux },
+                { skill: "React Router", src: images.reactRouter },
+                // { skill: "amCharts", src: images.amcharts },
             ],
         },
         {
             category: "Build Tools",
             skills: [
-                // { skill: "Webpack", img: Images.webpack },
-                { skill: "NPM", img: Images.npm },
-                { skill: "Gulp", img: Images.gulp },
-                { skill: "ESLint", img: Images.eslint },
+                // { skill: "Webpack", src: images.webpack },
+                { skill: "NPM", src: images.npm },
+                { skill: "Gulp", src: images.gulp },
+                { skill: "ESLint", src: images.eslint },
             ],
         },
         {
             category: "Other",
             skills: [
-                { skill: "GitHub", img: Images.github },
-                // { skill: "Sentry", img: Images.sentry },
-                { skill: "Photoshop", img: Images.photoshop },
-                { skill: "Mathematics", img: Images.math },
-                { skill: "Spanish", img: Images.spanish },
+                { skill: "GitHub", src: images.github },
+                // { skill: "Sentry", src: images.sentry },
+                { skill: "Photoshop", src: images.photoshop },
+                { skill: "Mathematics", src: images.math },
+                { skill: "Spanish", src: images.spanish },
             ],
         },
     ];
