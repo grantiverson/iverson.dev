@@ -20,18 +20,15 @@ const Project = ({
     const { ProjectTypes } = constants.ENUMS;
 
     const images = {
-        [ProjectTypes["HTML/CSS"]]: (
+        [ProjectTypes.HTML_CSS]: (
             <>
-                <ProjectImage
-                    alt={ProjectTypes["HTML/CSS"]}
-                    src={Images.html}
-                />
-                <ProjectImage alt={ProjectTypes["HTML/CSS"]} src={Images.css} />
+                <ProjectImage alt={ProjectTypes.HTML_CSS} src={Images.html} />
+                <ProjectImage alt={ProjectTypes.HTML_CSS} src={Images.css} />
             </>
         ),
-        [ProjectTypes.JavaScript]: (
+        [ProjectTypes.JAVASCRIPT]: (
             <ProjectImage
-                alt={ProjectTypes.JavaScript}
+                alt={ProjectTypes.JAVASCRIPT}
                 src={Images.javascript}
             />
         ),
