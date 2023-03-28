@@ -2,6 +2,10 @@
     "folders": [
         { "name": "Root", "path": ".." },
         {
+            "name": "Mastermind (packages/mastermind)",
+            "path": "../packages/mastermind"
+        },
+        {
             "name": "Portfolio (packages/portfolio)",
             "path": "../packages/portfolio"
         }
