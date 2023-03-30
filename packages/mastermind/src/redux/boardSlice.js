@@ -2,29 +2,19 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
-import { guessColors } from "../utility";
+import { buildHints, buildPieces, guessColors } from "../utility";
 
-const initialHints = [
-    { color: null, id: "hint-0" },
-    { color: null, id: "hint-1" },
-    { color: null, id: "hint-2" },
-    { color: null, id: "hint-3" },
-];
-const initialRow = [
-    { color: null, id: "piece-0" },
-    { color: null, id: "piece-1" },
-    { color: null, id: "piece-2" },
-    { color: null, id: "piece-3" },
-];
+const hints = buildHints(null, null, null, null);
+const pieces = buildPieces(null, null, null, null);
 const initialRows = [
-    { hints: initialHints, id: "row-0", row: initialRow },
-    { hints: initialHints, id: "row-1", row: initialRow },
-    { hints: initialHints, id: "row-2", row: initialRow },
-    { hints: initialHints, id: "row-3", row: initialRow },
-    { hints: initialHints, id: "row-4", row: initialRow },
-    { hints: initialHints, id: "row-5", row: initialRow },
-    { hints: initialHints, id: "row-6", row: initialRow },
-    { hints: initialHints, id: "row-7", row: initialRow },
+    { hints, id: "row-0", pieces },
+    { hints, id: "row-1", pieces },
+    { hints, id: "row-2", pieces },
+    { hints, id: "row-3", pieces },
+    { hints, id: "row-4", pieces },
+    { hints, id: "row-5", pieces },
+    { hints, id: "row-6", pieces },
+    { hints, id: "row-7", pieces },
 ];
 
 const generateSolution = () =>
@@ -42,7 +32,7 @@ const generateSolution = () =>
 export const boardSlice = createSlice({
     name: "board",
     initialState: {
-        active: { row: initialRows.length - 1, column: 0 },
+        active: { row: initialRows.length - 1, piece: 0 },
         rows: initialRows,
         solution: generateSolution(),
     },
@@ -51,14 +41,14 @@ export const boardSlice = createSlice({
             state.active = action.payload;
         },
         setHints: (state, action) => {
-            const { active, hints } = action.payload;
+            const { active, hints: newHints } = action.payload;
 
-            state.rows[active.row].hints = hints;
+            state.rows[active.row].hints = newHints;
         },
         setRow: (state, action) => {
-            const { active, row } = action.payload;
+            const { active, pieces: newPieces } = action.payload;
 
-            state.rows[active.row].row = row;
+            state.rows[active.row].pieces = newPieces;
         },
     },
 });

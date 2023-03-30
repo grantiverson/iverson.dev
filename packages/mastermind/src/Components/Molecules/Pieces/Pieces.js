@@ -5,11 +5,11 @@ import Piece from "../../Atoms/Piece";
 
 import "./Pieces.scss";
 
-const Pieces = ({ active, row, ...rest }) => (
+const Pieces = ({ active, pieces, ...rest }) => (
     <div className="pieces">
-        {row.map(({ color, id }, i) => (
+        {pieces.map(({ color, id }, i) => (
             <Piece
-                column={i}
+                piece={i}
                 isActive={active === i}
                 key={id}
                 {...{ color }}
@@ -25,7 +25,7 @@ Pieces.defaultProps = {
 
 Pieces.propTypes = {
     active: PropTypes.number,
-    row: PropTypes.arrayOf(
+    pieces: PropTypes.arrayOf(
         PropTypes.shape({ color: PropTypes.string, id: PropTypes.string }),
     ).isRequired,
 };

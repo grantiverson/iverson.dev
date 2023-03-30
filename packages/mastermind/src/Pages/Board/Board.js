@@ -15,25 +15,25 @@ const Board = () => {
 
     const onClick = ({ color }) => {
         // update new row color
-        const newRow = [...rows[active.row].row];
-        const newPiece = { ...newRow[active.column], color };
-        newRow[active.column] = newPiece;
+        const newPieces = [...rows[active.row].pieces];
+        const newPiece = { ...newPieces[active.piece], color };
+        newPieces[active.piece] = newPiece;
 
         // set next piece as active
         const newActive = {
             ...active,
-            column: active.column + 1,
+            piece: active.piece + 1,
         };
 
         // get hints from guess
-        const newHints = checkGuess(solution, newRow);
+        const newHints = checkGuess(solution, newPieces);
 
-        dispatch(setRow({ active, row: newRow }));
+        dispatch(setRow({ active, pieces: newPieces }));
 
         // if at the end of the row, make the first piece in the next row active
         // and check the guess against the solution
-        if (active.column === 3) {
-            newActive.column = 0;
+        if (active.piece === 3) {
+            newActive.piece = 0;
             newActive.row = active.row - 1;
 
             dispatch(setHints({ active, hints: newHints }));
@@ -44,10 +44,10 @@ const Board = () => {
 
     return (
         <div className="board">
-            <Row row={solution} />
+            <Row pieces={solution} />
             <ConnectedPlayField />
             <Pieces
-                row={guessColors.map((color) => ({ color, id: color }))}
+                pieces={guessColors.map((color) => ({ color, id: color }))}
                 {...{ onClick }}
             />
         </div>

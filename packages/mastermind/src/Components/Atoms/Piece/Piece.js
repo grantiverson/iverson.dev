@@ -9,13 +9,13 @@ const Piece = (props) => {
 
     return (
         <button
-            aria-label="piece"
+            aria-label={`${color} piece`}
             className={cx(
                 "piece",
                 isActive && "piece--active",
                 color && `piece--${color}`,
             )}
-            onClick={() => onClick(props)}
+            onClick={() => onClick?.call(null, props)}
             type="button"
         />
     );
@@ -24,7 +24,7 @@ const Piece = (props) => {
 Piece.defaultProps = {
     color: undefined,
     isActive: false,
-    onClick: () => {},
+    onClick: undefined,
 };
 
 Piece.propTypes = {

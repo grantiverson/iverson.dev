@@ -4,30 +4,33 @@ import PropTypes from "prop-types";
 import Row from "../Row";
 
 const PlayField = ({ active, onClick, rows }) =>
-    rows.map(({ hints, id, row }, rowIndex) => (
+    rows.map(({ hints, id, pieces }, rowIndex) => (
         <Row
-            active={active.row === rowIndex ? active.column : undefined}
+            active={active?.row === rowIndex ? active?.piece : undefined}
             key={id}
-            onClick={({ column }) => onClick({ row: rowIndex, column })}
-            {...{ hints, row }}
+            onClick={({ piece }) =>
+                onClick?.call(null, { row: rowIndex, piece })
+            }
+            {...{ hints, pieces }}
         />
     ));
 
 PlayField.defaultProps = {
     active: undefined,
+    onClick: undefined,
 };
 
 PlayField.propTypes = {
     active: PropTypes.shape({
         row: PropTypes.number,
-        column: PropTypes.number,
+        piece: PropTypes.number,
     }),
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
     rows: PropTypes.arrayOf(
         PropTypes.shape({
             hints: PropTypes.arrayOf(PropTypes.shape()),
             id: PropTypes.string.isRequired,
-            row: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+            pieces: PropTypes.arrayOf(PropTypes.shape()).isRequired,
         }).isRequired,
     ).isRequired,
 };

@@ -5,10 +5,10 @@ import { Hints, Pieces } from "../../Molecules";
 
 import "./Row.scss";
 
-const Row = ({ active, hints, row, ...rest }) => (
+const Row = ({ active, hints, pieces, ...rest }) => (
     <div className="row">
         <Hints {...{ hints }} />
-        <Pieces {...{ active, row }} {...rest} />
+        <Pieces {...{ active, pieces }} {...rest} />
     </div>
 );
 
@@ -20,7 +20,7 @@ Row.defaultProps = {
 Row.propTypes = {
     active: PropTypes.number,
     hints: PropTypes.arrayOf(PropTypes.shape()),
-    row: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+    pieces: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
 export default Row;

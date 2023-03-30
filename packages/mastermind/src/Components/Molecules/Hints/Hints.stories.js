@@ -1,5 +1,7 @@
 import React from "react";
 
+import { buildHints } from "../../../utility";
+
 import Hints from ".";
 
 export default {
@@ -14,10 +16,5 @@ const Template = (args) => <Hints {...args} />;
 
 export const _Hints = Template.bind({});
 _Hints.args = {
-    hints: [
-        { color: "black", id: "hint-0" },
-        { color: "white", id: "hint-1" },
-        { color: null, id: "hint-2" },
-        { color: null, id: "hint-3" },
-    ],
+    hints: buildHints("black", "white", null, null),
 };
