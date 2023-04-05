@@ -1,3 +1,6 @@
+import ConnectedBoard from "./ConnectedBoard";
 import Board from "./Board";
 
-export default Board;
+export default ConnectedBoard;
+
+export { Board };

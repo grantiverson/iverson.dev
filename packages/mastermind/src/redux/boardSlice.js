@@ -2,7 +2,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
-import { buildHints, buildPieces, guessColors } from "../utility";
+import { buildHints, buildPieces, generateSolution } from "../utility";
 
 const hints = buildHints(null, null, null, null);
 const pieces = buildPieces(null, null, null, null);
@@ -15,19 +15,8 @@ const initialRows = [
     { hints, id: "row-5", pieces },
     { hints, id: "row-6", pieces },
     { hints, id: "row-7", pieces },
+    { hints, id: "row-8", pieces },
 ];
-
-const generateSolution = () =>
-    Array(4)
-        .fill(null)
-        .reduce(
-            (arr, _, i) =>
-                arr.concat({
-                    color: guessColors[Math.floor(Math.random() * 6)],
-                    id: `piece-${i}`,
-                }),
-            [],
-        );
 
 export const boardSlice = createSlice({
     name: "board",

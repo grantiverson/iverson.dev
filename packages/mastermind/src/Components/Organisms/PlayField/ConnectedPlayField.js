@@ -9,7 +9,11 @@ const ConnectedPlayField = () => {
     const { active, rows } = useSelector((state) => state.board);
     const dispatch = useDispatch();
 
-    const onClick = ({ row, piece }) => dispatch(setActive({ row, piece }));
+    const onClick = ({ row, piece }) => {
+        if (row !== active.row) return;
+
+        dispatch(setActive({ ...active, piece }));
+    };
 
     return <PlayField {...{ active, onClick, rows }} />;
 };

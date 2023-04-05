@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 
 import store from "../../redux";
 
-import Board from "./Board";
+import Board from "./ConnectedBoard";
 
 export default {
     component: Board,

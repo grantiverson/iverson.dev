@@ -6,16 +6,16 @@ import { Hint } from "../../Atoms";
 import "./Hints.scss";
 
 const Hints = ({ hints = [] }) => {
-    [...hints].sort(({ color: a }, { color: b }) => {
+    const _hints = [...hints].sort(({ color: a }, { color: b }) => {
         if (a === null) return 1;
         if (b === null) return -1;
         return a.localeCompare(b);
     });
     const displayedHints = [
-        hints[0] || null,
-        hints[1] || null,
-        hints[2] || null,
-        hints[3] || null,
+        _hints[0] || { color: null, id: "missing-hint-0" },
+        _hints[1] || { color: null, id: "missing-hint-1" },
+        _hints[2] || { color: null, id: "missing-hint-2" },
+        _hints[3] || { color: null, id: "missing-hint-3" },
     ];
 
     return (

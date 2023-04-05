@@ -9,7 +9,7 @@ const Piece = (props) => {
 
     return (
         <button
-            aria-label={`${color} piece`}
+            aria-label={cx(color, "piece")}
             className={cx(
                 "piece",
                 isActive && "piece--active",

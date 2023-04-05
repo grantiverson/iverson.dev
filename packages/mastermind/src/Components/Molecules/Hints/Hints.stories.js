@@ -16,5 +16,5 @@ const Template = (args) => <Hints {...args} />;
 
 export const _Hints = Template.bind({});
 _Hints.args = {
-    hints: buildHints("black", "white", null, null),
+    hints: buildHints(null, "white", "black", null),
 };

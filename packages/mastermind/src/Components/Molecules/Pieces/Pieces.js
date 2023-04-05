@@ -16,6 +16,8 @@ const Pieces = ({ active, pieces, ...rest }) => (
                 {...rest}
             />
         ))}
+
+        <div className="hide-solution" />
     </div>
 );
 
