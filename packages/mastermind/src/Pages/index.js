@@ -1,4 +1,3 @@
-import Board from "./Board";
+import ConnectedBoard from "./Board";
 
-// eslint-disable-next-line import/prefer-default-export
-export { Board };
+export default ConnectedBoard;

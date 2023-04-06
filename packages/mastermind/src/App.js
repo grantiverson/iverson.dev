@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Board } from "./Pages";
+import Board from "./Pages";
 
 import "./normalize.css";
 
