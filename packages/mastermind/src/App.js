@@ -5,7 +5,7 @@ import { Board } from "./Pages";
 import "./normalize.css";
 
 const App = () => (
-    <div className="App">
+    <div className="app">
         <Board />
     </div>
 );

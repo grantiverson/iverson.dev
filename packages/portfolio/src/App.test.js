@@ -7,7 +7,7 @@ describe(`<App />`, () => {
     it("renders component", () => {
         render(<App />);
 
-        expect(document.querySelector(".App")).toBeInTheDocument();
+        expect(document.querySelector(".app")).toBeInTheDocument();
         expect(document.querySelector(".header")).toBeInTheDocument();
         expect(document.querySelector(".main")).toBeInTheDocument();
         expect(document.querySelector(".footer")).toBeInTheDocument();

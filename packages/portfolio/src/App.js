@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import "./App.scss";
 
 const App = () => (
-    <div className="App">
+    <div className="app">
         <Header />
         <Main />
         <Footer />
