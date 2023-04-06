@@ -61,6 +61,7 @@ jobs:
       matrix:
         workspace:
           - portfolio
+          - mastermind
 
     steps:
       - uses: actions/checkout@v3
