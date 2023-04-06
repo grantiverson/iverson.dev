@@ -2,7 +2,7 @@
     "name": "iverson.dev",
     "private": true,
     "scripts": {
-        "build": "lerna run build",
+        "build": "lerna run build --stream",
         "format": "lerna run format",
         "lint": "lerna run lint",
         "prepare": "husky install",
