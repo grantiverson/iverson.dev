@@ -3,10 +3,7 @@ import React from "react";
 import "./Footer.scss";
 
 const Footer = () => {
-    const onClick = () =>
-        document.querySelector(".header").scrollIntoView({
-            behavior: "smooth",
-        });
+    const onClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     return (
         <footer className="footer">

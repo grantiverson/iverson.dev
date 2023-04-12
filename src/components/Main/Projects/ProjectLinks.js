@@ -8,16 +8,22 @@ import NavLinks from "../../common/NavLinks";
 const ProjectLinks = ({ showProjects, setShowProjects }) => {
     const { ProjectTypes } = constants.ENUMS;
     const links = [
-        { text: "All", onClick: () => setShowProjects(ProjectTypes.ALL) },
         {
-            text: "HTML/CSS",
-            onClick: () => setShowProjects(ProjectTypes["HTML/CSS"]),
+            text: ProjectTypes[ProjectTypes.ALL],
+            onClick: () => setShowProjects(ProjectTypes.ALL),
         },
         {
-            text: "JavaScript",
-            onClick: () => setShowProjects(ProjectTypes.JavaScript),
+            text: ProjectTypes[ProjectTypes.HTML_CSS],
+            onClick: () => setShowProjects(ProjectTypes.HTML_CSS),
         },
-        { text: "React", onClick: () => setShowProjects(ProjectTypes.REACT) },
+        {
+            text: ProjectTypes[ProjectTypes.JAVASCRIPT],
+            onClick: () => setShowProjects(ProjectTypes.JAVASCRIPT),
+        },
+        {
+            text: ProjectTypes[ProjectTypes.REACT],
+            onClick: () => setShowProjects(ProjectTypes.REACT),
+        },
     ];
 
     return <NavLinks active={ProjectTypes[showProjects]} {...{ links }} />;

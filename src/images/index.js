@@ -20,7 +20,7 @@ import solarSystem from "./projects-solar-system.jpg";
 import spanish from "./skills-spanish.png";
 import veggieFinder from "./projects-veggie-finder.jpg";
 
-const Images = {
+export {
     arcadeGame,
     arrow,
     concentration,
@@ -43,5 +43,3 @@ const Images = {
     spanish,
     veggieFinder,
 };
-
-export default Images;
