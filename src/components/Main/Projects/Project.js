@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import constants from "../../../core/constants";
 
-import Images from "../../../images";
-import { GitHub } from "../../common/FontAwesome/brands";
+import * as images from "../../../images";
+import { GitHub } from "../../common/FontAwesome";
 import ProjectImage from "./ProjectImage";
 
 import "./Project.scss";
@@ -19,42 +19,43 @@ const Project = ({
 }) => {
     const { ProjectTypes } = constants.ENUMS;
 
-    const images = {
-        [ProjectTypes["HTML/CSS"]]: (
+    const technologyImages = {
+        [ProjectTypes.HTML_CSS]: (
             <>
-                <ProjectImage
-                    alt={ProjectTypes["HTML/CSS"]}
-                    src={Images.html}
-                />
-                <ProjectImage alt={ProjectTypes["HTML/CSS"]} src={Images.css} />
+                <ProjectImage alt={ProjectTypes.HTML_CSS} src={images.html} />
+                <ProjectImage alt={ProjectTypes.HTML_CSS} src={images.css} />
             </>
         ),
-        [ProjectTypes.JavaScript]: (
+        [ProjectTypes.JAVASCRIPT]: (
             <ProjectImage
-                alt={ProjectTypes.JavaScript}
-                src={Images.javascript}
+                alt={ProjectTypes.JAVASCRIPT}
+                src={images.javascript}
             />
         ),
         [ProjectTypes.MATH]: (
-            <ProjectImage alt={ProjectTypes.MATH} src={Images.math} />
+            <ProjectImage alt={ProjectTypes.MATH} src={images.math} />
         ),
         [ProjectTypes.REACT]: (
-            <ProjectImage alt={ProjectTypes.REACT} src={Images.react} />
+            <ProjectImage alt={ProjectTypes.REACT} src={images.react} />
         ),
     };
 
+    const target = url.includes("https")
+        ? { target: "_blank", rel: "noreferrer" }
+        : null;
+
     return (
         <div className="project">
-            <a href={url} target="_blank" rel="noreferrer">
+            <a href={url} {...target}>
                 <img className="project__screen-shot" src={ss} alt={title} />
                 <div className="project__overlay">
-                    <span className="project__title">{title}</span>
+                    <h4 className="project__title">{title}</h4>
                     <p>{description}</p>
                 </div>
                 <div className="project__technologies">
                     {technologies.map((technology) => (
                         <React.Fragment key={technology}>
-                            {images[technology]}
+                            {technologyImages[technology]}
                         </React.Fragment>
                     ))}
                 </div>

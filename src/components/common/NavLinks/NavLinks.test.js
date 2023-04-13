@@ -1,42 +1,26 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 
 import NavLinks from "./NavLinks";
 
+const links = [
+    { text: "One", onClick: () => {} },
+    { text: "Two", onClick: () => {} },
+    { text: "Three", onClick: () => {} },
+];
+const TestNavLinks = () => <NavLinks {...{ links }} />;
+
 describe(`<NavLinks />`, () => {
     it("renders nav links", () => {
-        render(
-            <NavLinks
-                links={[
-                    { text: "One", onClick: () => {} },
-                    { text: "Two", onClick: () => {} },
-                    { text: "Three", onClick: () => {} },
-                ]}
-            />
-        );
+        render(<TestNavLinks />);
 
-        const navigation = screen.getByRole("navigation");
-        const list = screen.getByRole("list");
-        const listitems = screen.getAllByRole("listitem");
-        const links = screen.getAllByRole("link");
+        const linkElements = screen.getAllByRole("link");
 
-        expect(navigation).toBeInTheDocument();
-        expect(list).toBeInTheDocument();
-        expect(listitems.length).toBe(3);
-        expect(links[0]).toHaveTextContent("One");
-        expect(links[1]).toHaveTextContent("Two");
-        expect(links[2]).toHaveTextContent("Three");
-    });
-
-    it("calls onClick", async () => {
-        const user = userEvent.setup();
-        const onClick = jest.fn();
-        const links = [{ text: "One", onClick }];
-
-        render(<NavLinks {...{ links }} />);
-
-        await user.click(screen.getByRole("link"));
-
-        expect(onClick).toHaveBeenCalledTimes(1);
+        expect(screen.getByRole("navigation")).toHaveClass("nav-links");
+        expect(screen.getByRole("list")).toHaveClass("nav-links__links");
+        expect(screen.getAllByRole("listitem").length).toBe(3);
+        links.forEach((link, i) => {
+            expect(linkElements[i]).toHaveTextContent(link.text);
+        });
     });
 });

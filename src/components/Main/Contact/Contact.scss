@@ -8,15 +8,14 @@
     }
 
     &__links {
-        display: flex;
-        justify-content: center;
-    }
+        text-align: center;
 
-    &__icons {
-        margin-right: 0.3125rem;
-    }
+        svg {
+            margin-right: 0.3125rem;
+        }
 
-    &__info a {
-        color: vars.$accent-color;
+        a {
+            color: vars.$accent-color;
+        }
     }
 }

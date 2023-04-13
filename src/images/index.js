@@ -9,6 +9,7 @@ import html from "./skills-html5.png";
 import jQuery from "./skills-jquery.png";
 import javascript from "./skills-javascript.png";
 import logo from "./logo.png";
+import mastermind from "./projects-mastermind.jpg";
 import math from "./skills-math.png";
 import npm from "./skills-npm.png";
 import photoshop from "./skills-photoshop.png";
@@ -19,8 +20,17 @@ import sierpinski from "./projects-sierpinski.jpg";
 import solarSystem from "./projects-solar-system.jpg";
 import spanish from "./skills-spanish.png";
 import veggieFinder from "./projects-veggie-finder.jpg";
+import sentry from "./skills-sentry.png";
+import webpack from "./skills-webpack.png";
+import nx from "./skills-nx.png";
+import lerna from "./skills-lerna.png";
+import redux from "./skills-redux.png";
+import amCharts from "./skills-amCharts.png";
+import twig from "./skills-twig.png";
+import prettier from "./skills-prettier.png";
+import stylelint from "./skills-stylelint.png";
 
-const Images = {
+export {
     arcadeGame,
     arrow,
     concentration,
@@ -32,6 +42,7 @@ const Images = {
     jQuery,
     javascript,
     logo,
+    mastermind,
     math,
     npm,
     photoshop,
@@ -42,6 +53,13 @@ const Images = {
     solarSystem,
     spanish,
     veggieFinder,
+    sentry,
+    webpack,
+    nx,
+    lerna,
+    redux,
+    amCharts,
+    twig,
+    prettier,
+    stylelint,
 };
-
-export default Images;

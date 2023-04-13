@@ -19,6 +19,7 @@
         &:hover {
             box-shadow: 0.25rem 0.5rem 0.625rem vars.$light-bg-shadow-color;
             transition: 0.25s ease;
+            scale: 1.005;
         }
     }
 
@@ -29,6 +30,10 @@
         justify-content: space-around;
         max-width: 18rem;
         gap: 2rem;
+    }
+
+    &__item {
+        flex: 1 1 0px;
     }
 
     &__img {
