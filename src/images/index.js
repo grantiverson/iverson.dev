@@ -9,6 +9,7 @@ import html from "./skills-html5.png";
 import jQuery from "./skills-jquery.png";
 import javascript from "./skills-javascript.png";
 import logo from "./logo.png";
+import mastermind from "./projects-mastermind.jpg";
 import math from "./skills-math.png";
 import npm from "./skills-npm.png";
 import photoshop from "./skills-photoshop.png";
@@ -32,6 +33,7 @@ export {
     jQuery,
     javascript,
     logo,
+    mastermind,
     math,
     npm,
     photoshop,

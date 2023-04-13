@@ -12,7 +12,7 @@ export const projects = [
     {
         description: `I was playing mastermind with my son and thought, "I wonder if I can code this game?" So, I gave it a shot!`,
         repositoryUrl: "https://github.com/grantiverson/mastermind",
-        ss: "https://placekitten.com/500/333",
+        ss: images.mastermind,
         technologies: [ProjectTypes.REACT],
         title: "Mastermind Game",
         url: "https://grantiverson.github.io/mastermind/",
@@ -24,7 +24,7 @@ export const projects = [
         ss: images.veggieFinder,
         technologies: [ProjectTypes.REACT],
         title: "Veggie Finder",
-        url: "https://veggie-finder.herokuapp.com/",
+        url: "https://grantiverson.github.io/veggie-finder",
     },
     {
         description:
@@ -33,7 +33,7 @@ export const projects = [
         ss: images.arcadeGame,
         technologies: [ProjectTypes.JAVASCRIPT],
         title: "Arcade Game",
-        url: "https://iverson.io/projects/arcade-game/",
+        url: "arcade-game",
     },
     {
         description:
@@ -42,7 +42,7 @@ export const projects = [
         ss: images.concentration,
         technologies: [ProjectTypes.HTML_CSS, ProjectTypes.JAVASCRIPT],
         title: "Concentration Game",
-        url: "https://iverson.io/projects/concentration/",
+        url: "concentration",
     },
     {
         description:
@@ -51,7 +51,7 @@ export const projects = [
         ss: images.solarSystem,
         technologies: [ProjectTypes.JAVASCRIPT, ProjectTypes.MATH],
         title: "Solar System Model",
-        url: "https://iverson.io/projects/solar-system/",
+        url: "solar-system",
     },
     {
         description:
@@ -60,7 +60,7 @@ export const projects = [
         ss: images.sierpinski,
         technologies: [ProjectTypes.JAVASCRIPT, ProjectTypes.MATH],
         title: "Sierpinski's Triangle",
-        url: "https://iverson.io/projects/sierpinski/",
+        url: "sierpinski",
     },
 ];
 

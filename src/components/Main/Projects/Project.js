@@ -40,9 +40,13 @@ const Project = ({
         ),
     };
 
+    const target = url.includes("https")
+        ? { target: "_blank", rel: "noreferrer" }
+        : null;
+
     return (
         <div className="project">
-            <a href={url} target="_blank" rel="noreferrer">
+            <a href={url} {...target}>
                 <img className="project__screen-shot" src={ss} alt={title} />
                 <div className="project__overlay">
                     <h4 className="project__title">{title}</h4>
