@@ -8,9 +8,12 @@ const About = () => (
         <div className="about__content">
             <p className="indent">
                 I am an <span className="dark-text-span">avid learner</span>{" "}
-                with a mission to use my skills to uplift others. After teaching
-                math for eight years I became frustrated with the education
-                system and decided to switch careers. Now I am applying my{" "}
+                with a mission to use my skills to uplift others.
+            </p>
+            <p className="indent">
+                After teaching math for eight years I became frustrated with the
+                education system and decided to switch careers. Now I am
+                applying my{" "}
                 <span className="dark-text-span">expert problem solving</span>{" "}
                 and <span className="dark-text-span">communication</span> skills
                 to web development.
@@ -23,14 +26,18 @@ const About = () => (
                 <span className="dark-text-span">
                     JavaScript frameworks and libraries
                 </span>
-                , making and handling API calls, and build tools that automate
+                , making and handling API calls, and build tools that simplify
                 time consuming aspects of development.
             </p>
             <p className="indent">
-                I spend most of my free time building apps that challenge me to
-                grow in my understanding of the latest technologies. My goal is
-                to continue increasing my talents to one day create tech that
-                makes a difference in the lives of millions around the world.
+                Now, as a{" "}
+                <span className="dark-text-span">
+                    Senior Front-end Engineer
+                </span>
+                , I focus on building systems to{" "}
+                <span className="dark-text-span">improve code quality</span> and
+                empowering other developers to have a{" "}
+                <span className="dark-text-span">greater impact</span>.
             </p>
         </div>
     </section>
