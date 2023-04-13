@@ -20,6 +20,15 @@ import sierpinski from "./projects-sierpinski.jpg";
 import solarSystem from "./projects-solar-system.jpg";
 import spanish from "./skills-spanish.png";
 import veggieFinder from "./projects-veggie-finder.jpg";
+import sentry from "./skills-sentry.png";
+import webpack from "./skills-webpack.png";
+import nx from "./skills-nx.png";
+import lerna from "./skills-lerna.png";
+import redux from "./skills-redux.png";
+import amCharts from "./skills-amCharts.png";
+import twig from "./skills-twig.png";
+import prettier from "./skills-prettier.png";
+import stylelint from "./skills-stylelint.png";
 
 export {
     arcadeGame,
@@ -44,4 +53,13 @@ export {
     solarSystem,
     spanish,
     veggieFinder,
+    sentry,
+    webpack,
+    nx,
+    lerna,
+    redux,
+    amCharts,
+    twig,
+    prettier,
+    stylelint,
 };

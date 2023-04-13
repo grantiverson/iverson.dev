@@ -13,7 +13,7 @@ const Skills = () => {
             skills: [
                 { skill: "HTML5", src: images.html },
                 { skill: "JSX", src: images.react },
-                // { skill: "Twig", src: images.twig },
+                { skill: "Twig", src: images.twig },
             ],
         },
         {
@@ -26,30 +26,34 @@ const Skills = () => {
         {
             category: "JavaScript",
             skills: [
+                { skill: "amCharts", src: images.amCharts },
                 { skill: "JavaScript", src: images.javascript },
                 { skill: "jQuery", src: images.jQuery },
                 { skill: "React", src: images.react },
-                // { skill: "Redux", src: images.redux },
                 { skill: "React Router", src: images.reactRouter },
-                // { skill: "amCharts", src: images.amcharts },
+                { skill: "Redux", src: images.redux },
             ],
         },
         {
             category: "Build Tools",
             skills: [
-                // { skill: "Webpack", src: images.webpack },
-                { skill: "NPM", src: images.npm },
-                { skill: "Gulp", src: images.gulp },
                 { skill: "ESLint", src: images.eslint },
+                { skill: "Gulp", src: images.gulp },
+                { skill: "Lerna", src: images.lerna },
+                { skill: "NPM", src: images.npm },
+                { skill: "Nx", src: images.nx },
+                { skill: "Prettier", src: images.prettier },
+                { skill: "Stylelint", src: images.stylelint },
+                { skill: "Webpack", src: images.webpack },
             ],
         },
         {
             category: "Other",
             skills: [
                 { skill: "GitHub", src: images.github },
-                // { skill: "Sentry", src: images.sentry },
-                { skill: "Photoshop", src: images.photoshop },
                 { skill: "Mathematics", src: images.math },
+                { skill: "Photoshop", src: images.photoshop },
+                { skill: "Sentry", src: images.sentry },
                 { skill: "Spanish", src: images.spanish },
             ],
         },
