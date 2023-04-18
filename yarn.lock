@@ -1871,7 +1871,7 @@ __metadata:
     eslint-config-airbnb: ^19.0.4
     eslint-config-prettier: ^8.8.0
     eslint-plugin-import: ^2.27.5
-    eslint-plugin-jsdoc: ^40.1.0
+    eslint-plugin-jsdoc: ^43.0.0
     eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: ^7.32.2
@@ -3881,6 +3881,13 @@ __metadata:
   version: 2.0.0
   resolution: "aproba@npm:2.0.0"
   checksum: 5615cadcfb45289eea63f8afd064ab656006361020e1735112e346593856f87435e02d8dcc7ff0d11928bc7d425f27bc7c2a84f6c0b35ab0ff659c814c138a24
+  languageName: node
+  linkType: hard
+
+"are-docs-informative@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "are-docs-informative@npm:0.0.2"
+  checksum: 7a48ca90d66e29afebc4387d7029d86cfe97bad7e796c8e7de01309e02dcfc027250231c02d4ca208d2984170d09026390b946df5d3d02ac638ab35f74501c74
   languageName: node
   linkType: hard
 
@@ -6176,11 +6183,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:^40.1.0":
-  version: 40.1.1
-  resolution: "eslint-plugin-jsdoc@npm:40.1.1"
+"eslint-plugin-jsdoc@npm:^43.0.0":
+  version: 43.0.0
+  resolution: "eslint-plugin-jsdoc@npm:43.0.0"
   dependencies:
     "@es-joy/jsdoccomment": ~0.37.0
+    are-docs-informative: ^0.0.2
     comment-parser: 1.3.1
     debug: ^4.3.4
     escape-string-regexp: ^4.0.0
@@ -6189,7 +6197,7 @@ __metadata:
     spdx-expression-parse: ^3.0.1
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
-  checksum: fb2d7c80f27256ae446eeb7df0390155b90192a3d2fbbf8136f8b22a18be4d9aa9e65eef95e2ce89297d5149f2696ec04616a5a9d33f085056b2ab04b347660e
+  checksum: 43609c1f397c674b3b8a9f4ceea4f7556b1dbf30a16e5e3b0166c4142305a97706a629df4bbda4d0c675d970e8c9440d82afa2cf132fdd2beff2ad98f1c9ec87
   languageName: node
   linkType: hard
 
